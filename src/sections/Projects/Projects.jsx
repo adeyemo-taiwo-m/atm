@@ -7,7 +7,9 @@ export default function Projects() {
   return (
     <section id="projects" className="py-16 px-6 tab:px-12 lap:px-24">
       <div className="max-w-6xl mx-auto">
-        <Heading>My Recent Projects</Heading>
+        <div className="text-center">
+          <Heading>My Recent Projects</Heading>
+        </div>
 
         <div className="mt-8 grid grid-cols-1 tab:grid-cols-1 lap:grid-cols-2 gap-8">
           {projectsData.map((project, idx) => (

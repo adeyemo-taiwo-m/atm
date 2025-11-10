@@ -12,7 +12,7 @@ function ProjectCard({ project, idx }) {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-56 object-cover filter grayscale transition-all duration-500 hover:filter-none"
+          className="w-full h-56 object-cover filter grayscale md:filter hover:filter-none transition-all duration-500"
         />
       </div>
 
@@ -39,7 +39,7 @@ function ProjectCard({ project, idx }) {
         </div>
 
         {/* Buttons */}
-        <div className="mt-6 flex  justify-between">
+        <div className="mt-6 flex justify-between">
           <Button variant="small">View Live</Button>
           <Button variant="secondarySmall">View Design</Button>
         </div>
