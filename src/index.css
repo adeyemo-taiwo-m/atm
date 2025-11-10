@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-*: initial;
+  --breakpoint-tab: 40rem;
+  --breakpoint-lap: 64rem;
+  --breakpoint-desk: 80rem;
+
+  /* ===================================================== */
+  /* 🎨 COLOR SYSTEM */
+  /* ===================================================== */
+
+  /* Gradient Start (Purple-Blue) */
+  --color-primary: #5b3cf2;
+  --color-primary-hover: #4a39e0;
+  --color-primary-active: #3a31cc;
+
+  /* Divider (Black) */
+  --color-divider: #000000;
+
+  /* Medium Blue */
+  --color-secondary: #347cff;
+  --color-secondary-hover: #2e6fde;
+  --color-secondary-active: #265fbd;
+
+  /* Sky Blue */
+  --color-accent: #4db7ff;
+  --color-accent-hover: #45a4e6;
+  --color-accent-active: #3a8fc9;
+
+  /* Light Cyan */
+  --color-light: #c8f2ff;
+  --color-light-hover: #b3e8ff;
+  --color-light-active: #9edfff;
+
+  /* SUCCESS (Green) */
+  --color-success: #17b890;
+  --color-success-hover: #129d7b;
+  --color-success-active: #0e8367;
+
+  --color-green-light: #e6f6f4;
+  --color-green-light-hover: #d9f2ef;
+  --color-green-light-active: #b0e4dd;
+
+  /* WARNING (Yellow / Orange) */
+  --color-warning: #f5a623;
+  --color-warning-hover: #e29412;
+  --color-warning-active: #cc830f;
+
+  --color-yellow-light: #fff9e6;
+  --color-yellow-light-hover: #fff6da;
+  --color-yellow-light-active: #ffecb2;
+
+  /* ERROR (Red) */
+  --color-error: #e63946;
+  --color-error-hover: #cf2e3b;
+  --color-error-active: #b92433;
+
+  --color-red-light: #ffdadc;
+  --color-red-light-hover: #ffc9cd;
+  --color-red-light-active: #ffb3b8;
+
+  /* NEUTRALS */
+  --color-neutral-100: #f6f6f6;
+  --color-neutral-200: #eaeaea;
+  --color-neutral-300: #d2d3d3;
+  --color-neutral-400: #b1b2b2;
+  --color-neutral-500: #8e9090;
+  --color-neutral-600: #797a7b;
+  --color-neutral-700: #57595a;
+  --color-neutral-800: #363939;
+  --color-neutral-900: #1f2223;
+  /* Neutral Gradient (Gray → Charcoal) */
+  /* --gradient-neutral: linear-gradient(90deg, #b1b2b2 0%, #363939 100%); */
+
+  /* LIGHTS & BACKGROUND */
+  --color-light: #e5f6fb;
+  --color-light-hover: #d7e2ee;
+  --color-light-active: #b2c8de;
+
+  --color-white: #ffffff;
+  --color-white-hover: #f3f6fa;
+
+  /* DARKS & TEXT */
+  --color-dark: #0f1e33;
+  --color-dark-hover: #0b182a;
+  --color-dark-active: #080f1f;
+
+  --color-black: #000000;
+  --color-black-hover: #0b0b0b;
+
+  /* BRAND NEUTRAL TONES */
+  --color-content-bg: #f8f8f8;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+
+  /* GOLD / HIGHLIGHT */
+  --color-gold: #ffe393;
+  --color-gold-hover: #ffd970;
+  --color-gold-active: #ffc94c;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.beams-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-rays {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+:root {
+  /* NEUTRAL GRADIENT (moved to :root so it exists at runtime) */
+  --gradient-neutral: linear-gradient(90deg, #b1b2b2 0%, #363939 100%);
+}
+
+/* Gradient text helper */
+.gradient-text {
+  display: inline-block; /* prevents some clipping issues */
+  background-image: var(--gradient-neutral);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-clip: text; /* Chrome / Safari */
+  background-clip: text; /* Firefox (behind a flag older) */
+  -webkit-text-fill-color: transparent; /* make text transparent for webkit */
+  color: transparent; /* fallback */
+}
