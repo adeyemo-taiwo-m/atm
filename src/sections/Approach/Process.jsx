@@ -1,9 +1,30 @@
+import React from "react";
+// eslint-disable-next-line
+import { motion } from "framer-motion";
 import { steps } from "../../assets/data";
 import Heading from "../../ui/Heading";
+import ProcessCard from "./ProcessCard";
 
 export default function Process() {
+  // Variant for process cards (slide up)
+  const cardVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2, // stagger cards
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <section id="process" className="py-16 px-6 tab:px-12 lap:px-24 ">
+    <section
+      id="process"
+      className="py-16 px-6 tab:px-12 lap:px-24 overflow-hidden"
+    >
       <div className="max-w-6xl space-y-6 mx-auto">
         <div className="text-center">
           <Heading>My Design & Development Process</Heading>
@@ -11,21 +32,16 @@ export default function Process() {
 
         <div className="grid gap-8 sm:grid-cols-1 tab:grid-cols-2 lap:grid-cols-4">
           {steps.map((step, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="relative p-6 bg-neutral-100 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:rotate-1 group"
+              custom={idx}
+              variants={cardVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
             >
-              {/* Monochrome animated border */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-neutral-100  to-neutral-300 opacity-30  transition-all duration-500 group-hover:opacity-100 pointer-events-none "></div>
-
-              <div className="relative space-y-2 z-10">
-                <div className="flex gap-4">
-                  <div className="text-5xl mb-4">{step.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                </div>
-                <p className="text-neutral-700 ">{step.description}</p>
-              </div>
-            </div>
+              <ProcessCard step={step} idx={idx} />
+            </motion.div>
           ))}
         </div>
       </div>

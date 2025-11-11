@@ -1,22 +1,56 @@
 import React from "react";
-
+// eslint-disable-next-line
+import { motion } from "framer-motion";
 import Heading from "../../ui/Heading";
+
 export default function About() {
+  // Motion variants for left and right sides
+  const leftVariant = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+    exit: { opacity: 0, x: -100, transition: { duration: 0.5 } },
+  };
+
+  const rightVariant = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+    exit: { opacity: 0, x: 100, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id="about" className="py-16 px-6 tab:px-12 lap:px-24">
-      <div className="max-w-6xl mx-auto flex flex-col lap:flex-row  gap-20 items-center">
+    <section
+      id="about"
+      className="py-16 px-6 tab:px-12 lap:px-24 overflow-hidden"
+    >
+      <div className="max-w-6xl mx-auto flex flex-col lap:flex-row gap-20 items-center">
         {/* ==== IMAGE SIDE ==== */}
-        <img
+        <motion.img
           src="/profile.png"
           alt="Adeyemo Taiwo"
-          className="object-cover h-120 rounded-[54px] shadow-lg 
-             transform transition-all duration-500 ease-out 
-             hover:rotate-2 hover:scale-[1.03] 
-             animate-tilt"
+          className="object-cover h-120 rounded-[54px] shadow-lg transform transition-all duration-500 ease-out hover:rotate-2 hover:scale-[1.03]"
+          variants={leftVariant}
+          initial="hidden"
+          whileInView="visible"
+          exit="exit"
+          viewport={{ once: false, amount: 0.5 }}
         />
 
         {/* ==== TEXT SIDE ==== */}
-        <div>
+        <motion.div
+          variants={rightVariant}
+          initial="hidden"
+          whileInView="visible"
+          exit="exit"
+          viewport={{ once: false, amount: 0.5 }}
+        >
           <Heading>About Me</Heading>
           <p className="mt-4 text-neutral-700 leading-relaxed">
             I’m a Frontend Developer and UI/UX Designer based in Nigeria. My
@@ -36,14 +70,14 @@ export default function About() {
               <strong>Location</strong> <p>Nigeria</p>
             </li>
             <li>
-              <strong>Focus</strong> <p> Frontend Development & UI Design</p>
+              <strong>Focus</strong> <p>Frontend Development & UI Design</p>
             </li>
             <li>
               <strong>Goal</strong>{" "}
               <p>Build impactful digital products for businesses</p>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

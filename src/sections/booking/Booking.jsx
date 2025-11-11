@@ -1,4 +1,6 @@
 import React from "react";
+// eslint-disable-next-line
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import Heading from "../../ui/Heading";
 import Button from "../../ui/Button";
@@ -18,14 +20,29 @@ export default function Booking() {
     reset();
   };
 
+  // Variant for slide-up
+  const slideUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
       id="booking"
-      className="flex justify-center py-20 px-6 md:px-12 lg:px-24"
+      className="flex justify-center py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
-      {" "}
       <MovingLogo>
-        <div className="w-full max-w-3xl bg-white/70 rounded-3xl p-10 shadow-lg border border-gray-100">
+        <motion.div
+          variants={slideUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          className="w-full max-w-3xl bg-white/70 rounded-3xl p-10 shadow-lg border border-gray-100"
+        >
           <div className="text-center">
             <Heading className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Book a Service
@@ -38,6 +55,7 @@ export default function Booking() {
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Full Name */}
               <div className="w-full">
                 <input
                   type="text"
@@ -58,6 +76,7 @@ export default function Booking() {
                 )}
               </div>
 
+              {/* Email */}
               <div className="w-full">
                 <input
                   type="email"
@@ -82,6 +101,7 @@ export default function Booking() {
                 )}
               </div>
 
+              {/* Phone */}
               <div className="w-full">
                 <input
                   type="tel"
@@ -102,6 +122,7 @@ export default function Booking() {
                 )}
               </div>
 
+              {/* Service */}
               <div className="w-full">
                 <select
                   {...register("service", {
@@ -128,6 +149,7 @@ export default function Booking() {
               </div>
             </div>
 
+            {/* Project Details */}
             <div className="w-full">
               <textarea
                 placeholder="Project Details"
@@ -152,7 +174,7 @@ export default function Booking() {
               Submit Booking
             </Button>
           </form>
-        </div>{" "}
+        </motion.div>
       </MovingLogo>
     </section>
   );
