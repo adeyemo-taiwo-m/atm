@@ -22,11 +22,11 @@ export default function Header() {
   ];
 
   return (
-    <div className=" tab:mx-8 mx-4  lap:mx-12 desk:mx-20">
+    <div className="tab:mx-8 mx-4 lap:mx-12 desk:mx-20">
       <header
-        className={`w-9/10 fixed top-4  left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+        className={`w-9/10 fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
           isSticky
-            ? "max-w-[var(--breakpoint-desk)] backdrop-blur-md bg-white/70 border border-white/40 shadow-sm rounded-full"
+            ? "max-w-[var(--breakpoint-desk)] backdrop-blur-md bg-white/70 shadow-sm rounded-full"
             : "max-w-[var(--breakpoint-desk)] bg-transparent"
         }`}
       >
@@ -43,7 +43,7 @@ export default function Header() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm  font-medium text-black/70 py-2 px-3 hover:bg-black/3 hover:rounded-full hover:py-2 hover:px-3"
+                className="text-sm font-medium text-black/70 py-2 px-3 hover:bg-black/3 hover:rounded-full hover:py-2 hover:px-3"
               >
                 {l.label}
               </a>

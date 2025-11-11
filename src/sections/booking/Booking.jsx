@@ -19,11 +19,12 @@ export default function Booking() {
   };
 
   return (
-    <MovingLogo>
-      <section
-        id="booking"
-        className="flex justify-center py-20 px-6 md:px-12 lg:px-24"
-      >
+    <section
+      id="booking"
+      className="flex justify-center py-20 px-6 md:px-12 lg:px-24"
+    >
+      {" "}
+      <MovingLogo>
         <div className="w-full max-w-3xl bg-white rounded-3xl p-10 shadow-lg border border-gray-100">
           <div className="text-center">
             <Heading className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -151,8 +152,8 @@ export default function Booking() {
               Submit Booking
             </Button>
           </form>
-        </div>
-      </section>
-    </MovingLogo>
+        </div>{" "}
+      </MovingLogo>
+    </section>
   );
 }
