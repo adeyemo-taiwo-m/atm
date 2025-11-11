@@ -25,7 +25,7 @@ export default function Booking() {
     >
       {" "}
       <MovingLogo>
-        <div className="w-full max-w-3xl bg-white rounded-3xl p-10 shadow-lg border border-gray-100">
+        <div className="w-full max-w-3xl bg-white/70 rounded-3xl p-10 shadow-lg border border-gray-100">
           <div className="text-center">
             <Heading className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Book a Service
