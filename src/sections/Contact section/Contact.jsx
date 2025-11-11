@@ -1,50 +1,26 @@
 import React from "react";
+import ContactIcons from "./ContactIcons";
+import Heading from "../../ui/Heading";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl font-semibold">Let’s Work Together</h2>
-        <p className="mt-4 text-neutral-700">
+    <section
+      id="contact"
+      className="flex justify-center items-center rounded-t-3xl py-4 px-6 tab:px-12 lap:px-24"
+      style={{
+        background:
+          "linear-gradient(to right, var(--color-neutral-400), var(--color-neutral-800))",
+      }}
+    >
+      <div className="w-full backdrop-blur-md p-6 text-center">
+        <Heading className="!text-white">Let’s Work Together</Heading>
+        <p className="text-gray-200 text-lg mb-10 leading-relaxed">
           Have a project in mind or want to collaborate? I’m always open to
           discussing new ideas or improving existing projects.
         </p>
 
-        <div className="mt-6 space-y-2 text-neutral-700">
-          <div>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:youremail@gmail.com">youremail@gmail.com</a>
-          </div>
-          <div>
-            <strong>LinkedIn:</strong>{" "}
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin.com/in/yourusername
-            </a>
-          </div>
-          <div>
-            <strong>GitHub:</strong>{" "}
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
-              github.com/yourusername
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <a
-            href="mailto:youremail@gmail.com"
-            className="inline-block px-8 py-3 rounded-md bg-primary text-white"
-          >
-            Send a Message
-          </a>
-        </div>
+        {/* Contact Links */}
+        <ContactIcons />
       </div>
     </section>
   );

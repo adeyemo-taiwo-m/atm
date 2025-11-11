@@ -9,6 +9,8 @@ import Contact from "./sections/Contact section/Contact";
 import Header from "./ui/Header";
 import LightRays from "./ui/LightRays";
 import RippleGrid from "./ui/LightRays";
+import Booking from "./sections/booking/Booking";
+import MetallicLogo from "./ui/MovingLogo";
 
 function App() {
   return (
@@ -36,17 +38,19 @@ function App() {
           className="custom-rays"
         />
       </div> */}
-
-      <div className="px-4 relative  tab:px-8 lap:px-12 desk:px-20">
-        <Header />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Process />
-        <Testimonials />
+      <>
+        <div className="px-4 relative  tab:px-8 lap:px-12 desk:px-20">
+          <Header />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Process />
+          <Testimonials />
+          <Booking />
+        </div>
         <Contact />
-      </div>
+      </>
     </>
   );
 }

@@ -7,7 +7,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto flex flex-col lap:flex-row  gap-20 items-center">
         {/* ==== IMAGE SIDE ==== */}
         <img
-          src="/image.svg"
+          src="/profile.png"
           alt="Adeyemo Taiwo"
           className="object-cover h-120 rounded-[54px] shadow-lg 
              transform transition-all duration-500 ease-out 

@@ -77,3 +77,26 @@ export const steps = [
       "I test across devices, refine interactions, and iterate based on real feedback.",
   },
 ];
+
+export const testimonials = [
+  {
+    name: "Michael Thompson",
+    text: "I hired him to redesign our company website, and the results exceeded my expectations. The attention to detail in both UI and UX was outstanding!",
+  },
+  {
+    name: "Sophia Martinez",
+    text: "Working with Taiwo was seamless. They understood our vision and turned it into a website that’s not only beautiful but highly functional.",
+  },
+  {
+    name: "Daniel Kim",
+    text: "From concept to launch, the process was professional and smooth. The design creativity and coding expertise really made our product shine.",
+  },
+  {
+    name: "Olivia Brown",
+    text: "Taiwo delivered an amazing responsive design that works perfectly on all devices. Communication was clear, and deadlines were met without stress.",
+  },
+  {
+    name: "Liam Patel",
+    text: "I’m really impressed by Taiwo's problem-solving skills and attention to user experience. Our site now feels modern and intuitive thanks to his work.",
+  },
+];
