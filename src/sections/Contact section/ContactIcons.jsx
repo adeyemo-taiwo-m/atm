@@ -23,7 +23,7 @@ const socialLinks = [
 
 export default function ContactIcons() {
   return (
-    <div className="flex justify-center gap-6 mb-12 text-gray-200">
+    <div className="flex justify-center  mb-12 text-gray-200">
       {socialLinks.map((s, i) => (
         <a
           key={i}

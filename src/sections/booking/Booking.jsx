@@ -33,7 +33,7 @@ export default function Booking() {
   return (
     <section
       id="booking"
-      className="flex justify-center py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="flex justify-center py-20 px-6 tab:px-12 lap:px-24 overflow-hidden"
     >
       <MovingLogo>
         <motion.div

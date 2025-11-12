@@ -55,7 +55,7 @@ export default function Header() {
             {/* Moon icon */}
             <button
               aria-label="Toggle theme"
-              className="p-2 rounded-md hover:bg-black/5"
+              className="p-2 rounded-md cursor-pointer  hover:bg-black/5"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,9 @@ export default function Header() {
             </button>
 
             {/* Book a Call */}
-            <Button variant="small">Book a Call</Button>
+            <Button variant="small" className={"hidden lap:block"}>
+              Book a Call
+            </Button>
 
             {/* Mobile menu button */}
             <button
@@ -84,7 +86,7 @@ export default function Header() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-black"
+                className="h-6 w-6 cursor-pointer text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

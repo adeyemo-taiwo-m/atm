@@ -1,96 +1,73 @@
 import React from "react";
 // eslint-disable-next-line
 import { motion } from "framer-motion";
-import SkillsCard from "./SkillsCard";
 import Heading from "../../ui/Heading";
+import SkillsCard from "./SkillsCard";
+
+// React Icons
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaFigma } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiAdobephotoshop,
+  SiPostman,
+  SiFramer,
+} from "react-icons/si";
 
 export default function Skills() {
-  // Variant for the cards (slide up)
+  const skills = [
+    { name: "HTML5", icon: <FaHtml5 />, color: "#E44D26" },
+    { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+    { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
+    { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+    { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+    { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
+    { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
+    { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+    { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
+    { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
+  ];
+
   const cardVariant = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: (i = 1) => ({
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: {
-        delay: i * 0.2, // stagger each card
-        duration: 0.6,
+        delay: i * 0.1,
+        duration: 0.4,
         ease: "easeOut",
       },
     }),
   };
 
-  // Variant for the paragraph (slide from right)
-  const paragraphVariant = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { delay: 0.8, duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <section
       id="skills"
-      className="py-16 px-6 tab:px-12 lap:px-24 overflow-hidden"
+      className="py-16 px-6 tab:px-12 lap:px-24 bg-white overflow-hidden"
     >
-      <div className="max-w-6xl space-y-4 mx-auto text-center">
-        <Heading>Skills & Tools</Heading>
+      <div className="max-w-6xl mx-auto text-center space-y-8">
+        <Heading className="text-[var(--color-neutral-900)]">
+          Skills & Tools
+        </Heading>
+        <p className="text-[var(--color-neutral-500)] max-w-2xl mx-auto leading-relaxed">
+          I build and design digital products that combine creativity with
+          performance — tools that feel as good as they look.
+        </p>
 
-        {/* === GRID === */}
-        <div className="grid gap-8 sm:grid-cols-2 lap:grid-cols-3">
-          {["Frontend Development", "UI / UX Design", "Other"].map(
-            (title, index) => (
-              <motion.div
-                key={title}
-                custom={index}
-                variants={cardVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-              >
-                <SkillsCard title={title}>
-                  {title === "Frontend Development" && (
-                    <ul className="space-y-1 text-neutral-700 dark:text-neutral-300">
-                      <li>HTML5</li>
-                      <li>CSS3 / Tailwind CSS</li>
-                      <li>JavaScript (ES6+)</li>
-                      <li>React.js</li>
-                    </ul>
-                  )}
-                  {title === "UI / UX Design" && (
-                    <ul className="space-y-1 text-neutral-700 dark:text-neutral-300">
-                      <li>Figma</li>
-                      <li>Photoshop</li>
-                      <li>Design Systems</li>
-                      <li>Wireframing & Prototyping</li>
-                    </ul>
-                  )}
-                  {title === "Other" && (
-                    <ul className="space-y-1 text-neutral-700 dark:text-neutral-300">
-                      <li>Git & GitHub</li>
-                      <li>Responsive Design</li>
-                      <li>API Integration</li>
-                      <li>Performance & Accessibility</li>
-                    </ul>
-                  )}
-                </SkillsCard>
-              </motion.div>
-            )
-          )}
-        </div>
-
-        {/* Paragraph sliding in from the right */}
-        <motion.p
-          className="mt-10 text-neutral-500 max-w-3xl mx-auto leading-relaxed"
-          variants={paragraphVariant}
+        {/* Skills Grid */}
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 lap:grid-cols-4 gap-6 place-items-center"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          I combine design thinking and development logic to build interfaces
-          that don’t just look good — they work smoothly and meet user goals.
-        </motion.p>
+          {skills.map((skill, i) => (
+            <motion.div key={skill.name} custom={i} variants={cardVariant}>
+              <SkillsCard skill={skill} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

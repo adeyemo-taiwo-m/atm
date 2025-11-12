@@ -43,21 +43,15 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate="visible">
           <motion.div custom={0} variants={textVariants}>
-            <HeroText className="text-3xl tab:text-4xl lap:text-6xl font-bold text-center">
-              Turning Ideas into Functional,
-            </HeroText>
-          </motion.div>
-
-          <motion.div custom={1} variants={textVariants}>
-            <HeroText className="text-3xl tab:text-4xl lap:text-6xl font-bold text-center">
-              User-Friendly Web Experiences
+            <HeroText className="text-3xl tab:text-5xl lap:text-7xl font-bold text-center">
+              Turning Ideas into Functional, User-Friendly Web Experiences
             </HeroText>
           </motion.div>
 
           <motion.div custom={2} variants={textVariants}>
             <HeroText
               text={""}
-              className="mt-4 text-lg md:text-xl text-neutral-700"
+              className="mt-4 text-lg tab:text-xl text-neutral-700"
               duration={0.00000005}
             >
               I’m Taiwo Adeyemo — a Frontend Developer and UI Designer
