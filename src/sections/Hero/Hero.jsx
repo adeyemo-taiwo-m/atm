@@ -35,6 +35,17 @@ export default function Hero() {
     },
   };
 
+  // Scroll into sections
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth", // smooth scrolling
+        block: "start", // scroll so section aligns at top
+      });
+    }
+  }
+
   return (
     <section
       id="hero"
@@ -66,8 +77,15 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <Button variant="secondary">View My Work</Button>
-            <Button>Let’s Collaborate</Button>
+            <Button
+              variant="secondary"
+              onClick={() => scrollToSection("projects")}
+            >
+              View My Work
+            </Button>
+            <Button onClick={() => scrollToSection("booking")}>
+              Let’s Collaborate
+            </Button>
           </motion.div>
         </motion.div>
       </div>

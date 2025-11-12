@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,11 +16,21 @@ export default function Header() {
   }, []);
 
   const links = [
-    { label: "Home", href: "#home" },
-    { label: "Work", href: "#work" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Home", href: "#hero" },
+    { label: "Skills", href: "#skills" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];
+
+  // Smooth scroll handler
+  const handleScrollTo = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setMobileOpen(false); // close mobile menu if open
+  };
 
   return (
     <div className="tab:mx-8 mx-4 lap:mx-12 desk:mx-20">
@@ -44,6 +55,7 @@ export default function Header() {
                 key={l.href}
                 href={l.href}
                 className="text-sm font-medium text-black/70 py-2 px-3 hover:bg-black/3 hover:rounded-full hover:py-2 hover:px-3"
+                onClick={(e) => handleScrollTo(e, l.href)}
               >
                 {l.label}
               </a>
@@ -55,7 +67,7 @@ export default function Header() {
             {/* Moon icon */}
             <button
               aria-label="Toggle theme"
-              className="p-2 rounded-md cursor-pointer  hover:bg-black/5"
+              className="p-2 rounded-md cursor-pointer hover:bg-black/5"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +86,15 @@ export default function Header() {
             </button>
 
             {/* Book a Call */}
-            <Button variant="small" className={"hidden lap:block"}>
-              Book a Call
+            <Button
+              variant="whatsappLight"
+              className="hidden  lap:flex items-center"
+              onClick={() =>
+                window.open("https://wa.me/2347012425718", "_blank")
+              }
+            >
+              <FaWhatsapp className="mr-2 text-green-500" />
+              Chat Me
             </Button>
 
             {/* Mobile menu button */}
@@ -120,13 +139,22 @@ export default function Header() {
                   key={l.href}
                   href={l.href}
                   className="block text-base font-medium text-black/80 px-2 py-2 rounded-md hover:bg-black/5"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleScrollTo(e, l.href)}
                 >
                   {l.label}
                 </a>
               ))}
 
-              <Button variant="small">Book a Call</Button>
+              <Button
+                variant="whatsappLight"
+                className="  items-center"
+                onClick={() =>
+                  window.open("https://wa.me/2347012425718", "_blank")
+                }
+              >
+                <FaWhatsapp className="mr-2 text-green-500" />
+                Chat Me
+              </Button>
             </div>
           </div>
         )}

@@ -48,7 +48,7 @@ export default function Testimonials() {
   };
 
   return (
-    <>
+    <section id="testimonials">
       <div className="text-center mb-8">
         <Heading>What our clients say</Heading>
       </div>
@@ -120,6 +120,6 @@ export default function Testimonials() {
           ))}
         </motion.div>
       </div>
-    </>
+    </section>
   );
 }

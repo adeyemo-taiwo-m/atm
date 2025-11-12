@@ -1,4 +1,5 @@
-import React from "react";
+import { send } from "@emailjs/browser";
+
 // eslint-disable-next-line
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -15,9 +16,20 @@ export default function Booking() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Booking submitted:", data);
-    alert("Booking submitted! We'll get back to you soon.");
-    reset();
+    const serviceID = "service_64tm6lw";
+    const templateID = "template_orihvyt";
+    const publicKey = "PR4BYMprY_gY4sfDB";
+
+    send(serviceID, templateID, data, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        alert("Booking submitted! We'll get back to you soon.");
+        reset();
+      })
+      .catch((err) => {
+        console.error("Failed to send email:", err);
+        alert("Failed to send booking. Please try again later.");
+      });
   };
 
   // Variant for slide-up
@@ -179,3 +191,14 @@ export default function Booking() {
     </section>
   );
 }
+
+// title:
+// Message
+// name:
+// Adeyemo
+// time:
+// 200
+// email:
+// adeyemotaiwo
+// message:
+// i need a desin
