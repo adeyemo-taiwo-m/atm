@@ -9,6 +9,7 @@ import Contact from "./sections/Contact section/Contact";
 import Header from "./ui/Header";
 
 import Booking from "./sections/booking/Booking";
+import DownloadSection from "./Documents/DownloadSection";
 function App() {
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -47,6 +48,7 @@ function App() {
           <Process />
           <Testimonials />
           <Booking />
+          <DownloadSection />
         </div>
         <Contact />
       </>

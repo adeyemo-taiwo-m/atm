@@ -10,7 +10,7 @@ function Button({
 }) {
   const styles = {
     primary: `
-      tab:px-6 px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300
+      tab:px-6  px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300
       bg-gradient-to-r from-[var(--color-neutral-400)] to-[var(--color-neutral-800)]
       hover:from-[var(--color-neutral-300)] hover:to-[var(--color-neutral-700)]
     `,
@@ -51,7 +51,7 @@ function Button({
       <button
         onClick={onClick}
         type={type}
-        className={`${styles[variant]} cursor-pointer ${className}`}
+        className={`${styles[variant]} flex justify-center items-center gap-2 cursor-pointer ${className}`}
       >
         {children}
       </button>
