@@ -53,16 +53,21 @@ export default function About() {
         >
           <Heading>About Me</Heading>
           <p className="mt-4 text-neutral-700 leading-relaxed">
-            I’m a Frontend Developer and UI/UX Designer based in Nigeria. My
-            journey started in graphic design, where I learned how visuals
-            connect people to brands. Over time, I moved into UI design and
-            frontend development to turn those visuals into real, interactive
-            products.
+            Hi! I’m Taiwo, a Frontend Developer and UI/UX Designer. I help
+            businesses and brands{" "}
+            <strong>
+              create clean, responsive, and intuitive web experiences
+            </strong>{" "}
+            that engage users and drive results. My work ensures your digital
+            presence is professional, accessible, and easy to navigate.
           </p>
           <p className="mt-3 text-neutral-700 leading-relaxed">
-            Today, I focus on creating clean, responsive, and intuitive web
-            experiences — especially for business owners who want to digitize
-            their services or improve their customer experience.
+            I specialize in{" "}
+            <strong>turning ideas into interactive digital products</strong>—
+            from designing user-friendly interfaces to developing functional,
+            high-performing web applications. Whether you want to digitize your
+            services, improve your customer experience, or grow your online
+            presence, I provide solutions that make your business stand out.
           </p>
 
           <ul className="mt-6 grid grid-cols-1 tab:grid-cols-3 gap-4 text-neutral-800">
