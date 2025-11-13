@@ -16,6 +16,7 @@ export default function Booking() {
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log(data);
     const serviceID = "service_64tm6lw";
     const templateID = "template_orihvyt";
     const publicKey = "PR4BYMprY_gY4sfDB";
@@ -191,14 +192,3 @@ export default function Booking() {
     </section>
   );
 }
-
-// title:
-// Message
-// name:
-// Adeyemo
-// time:
-// 200
-// email:
-// adeyemotaiwo
-// message:
-// i need a desin

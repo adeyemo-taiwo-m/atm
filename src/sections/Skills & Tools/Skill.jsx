@@ -4,30 +4,9 @@ import { motion } from "framer-motion";
 import Heading from "../../ui/Heading";
 import SkillsCard from "./SkillsCard";
 
-// React Icons
-import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaFigma } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiJavascript,
-  SiAdobephotoshop,
-  SiPostman,
-  SiFramer,
-} from "react-icons/si";
+import { skills } from "../../assets/data";
 
 export default function Skills() {
-  const skills = [
-    { name: "HTML5", icon: <FaHtml5 />, color: "#E44D26" },
-    { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
-    { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
-    { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-    { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-    { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
-    { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
-    { name: "GitHub", icon: <FaGithub />, color: "#181717" },
-    { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
-    { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
-  ];
-
   const cardVariant = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: (i = 1) => ({

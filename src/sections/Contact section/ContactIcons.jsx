@@ -1,24 +1,19 @@
 import React from "react";
-import {
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 const socialLinks = [
-  { href: "mailto:youremail@gmail.com", icon: <FaEnvelope size={28} /> },
+  { href: "mailto:adyemotaiwom999@gmail.com", icon: <FaEnvelope size={28} /> },
   {
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/adeyemo-taiwo-m-035425284/",
     icon: <FaLinkedin size={28} />,
   },
-  { href: "https://github.com/yourusername", icon: <FaGithub size={28} /> },
+  { href: "https://github.com/adeyemo-taiwo-m", icon: <FaGithub size={28} /> },
   {
-    href: "https://instagram.com/yourusername",
+    href: "https://instagram.com/atmdesigns.dev",
     icon: <FaInstagram size={28} />,
   },
-  { href: "https://twitter.com/yourusername", icon: <FaTwitter size={28} /> }, // X
+  { href: "https://x.com/atmdesigns_dev", icon: <FaX size={28} /> }, // X
 ];
 
 export default function ContactIcons() {

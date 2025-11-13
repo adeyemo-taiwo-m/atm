@@ -1,5 +1,13 @@
 import { FaSearch, FaPaintBrush, FaCode, FaCheckCircle } from "react-icons/fa";
-
+// React Icons
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaFigma } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiAdobephotoshop,
+  SiFramer,
+  SiSupabase,
+} from "react-icons/si";
 export const projectsData = [
   {
     title: "NexCity Realty",
@@ -8,8 +16,9 @@ export const projectsData = [
     role: "UI/UX Design & Frontend Development",
     techStack: ["React", "Javascript", "Tailwind CSS"],
     image: "/nexcity.png",
-    liveLink: "https://nexcity-demo.com",
-    designLink: "https://www.behance.net/nexcity",
+    liveLink: "https://nex-city-reality-dashboard.vercel.app/",
+    designLink:
+      "https://www.behance.net/gallery/236814175/NextCity-Realty-Dashboard",
   },
   {
     title: "Optopcakes & Tools",
@@ -18,8 +27,8 @@ export const projectsData = [
     role: "UI/UX Design & Frontend Development",
     techStack: ["Figma", "React", "Tailwind CSS"],
     image: "/optopcakes.png",
-    liveLink: "https://optopcakes-demo.com", // replace with your actual live link
-    designLink: "https://www.behance.net/optopcakes", // replace with actual Behance link
+    liveLink: "https://optopcakes.vercel.app/", // replace with your actual live link
+    designLink: "https://www.behance.net/gallery/236814881/Optopcakes", // replace with actual Behance link
   },
   {
     title: "NexCity Realty Landing Page",
@@ -28,8 +37,9 @@ export const projectsData = [
     role: "UI/UX Design",
     techStack: ["Figma", "UI/UX Design", "Responsive Design"],
     image: "/nexcity-landing.png", // make sure this image exists in your /public/projects folder
-    liveLink: "https://nexcity-demo.com",
-    designLink: "https://www.behance.net/nexcity-landing",
+    liveLink: "https://nextcity-realestate.onrender.com",
+    designLink:
+      "https://www.behance.net/gallery/238470147/NexCity-Landing-Page",
   },
   {
     title: "Weather App",
@@ -38,8 +48,8 @@ export const projectsData = [
     role: "Frontend Developer",
     techStack: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
     image: "/weather.jpg", // make sure this image exists in your project folder
-    liveLink: "https://weather-app-demo.com", // replace with your actual live link
-    designLink: "https://www.behance.net/weatherapp", // replace with your actual Behance link
+    liveLink: "https://weather-app-fm30-eta.vercel.app/", // replace with your actual live link
+    designLink: "", // replace with your actual Behance link
   },
 ];
 
@@ -99,4 +109,17 @@ export const testimonials = [
     name: "Liam Patel",
     text: "I’m really impressed by Taiwo's problem-solving skills and attention to user experience. Our site now feels modern and intuitive thanks to his work.",
   },
+];
+
+export const skills = [
+  { name: "HTML5", icon: <FaHtml5 />, color: "#E44D26" },
+  { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+  { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+  { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+  { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
+  { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
+  { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+  { name: "Supabase", icon: <SiSupabase />, color: "#3ECF8E" },
+  { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
 ];

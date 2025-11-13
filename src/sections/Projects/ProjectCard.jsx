@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../ui/Button"; // adjust the path as needed
 
 function ProjectCard({ project, idx }) {
+  console.log(project);
   return (
     <article
       key={idx}
@@ -40,8 +41,22 @@ function ProjectCard({ project, idx }) {
 
         {/* Buttons */}
         <div className="mt-6 flex justify-between">
-          <Button variant="small">View Live</Button>
-          <Button variant="secondarySmall">View Design</Button>
+          {project?.liveLink && (
+            <Button
+              variant="small"
+              onClick={() => window.open(project?.liveLink, "_blank")}
+            >
+              View Live
+            </Button>
+          )}
+          {project?.designLink && (
+            <Button
+              variant="secondarySmall"
+              onClick={() => window.open(project?.designLink, "_blank")}
+            >
+              View Design
+            </Button>
+          )}
         </div>
       </div>
     </article>
