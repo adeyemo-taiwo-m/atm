@@ -71,9 +71,7 @@ export default function About() {
           </p>
 
           <ul className="mt-6 grid grid-cols-1 tab:grid-cols-3 gap-4 text-neutral-800">
-            <li>
-              <strong>Location</strong> <p>Nigeria</p>
-            </li>
+          
             <li>
               <strong>Focus</strong> <p>Frontend Development & UI Design</p>
             </li>

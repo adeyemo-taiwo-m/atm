@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
+import { SiX } from "react-icons/si";
 
 const socialLinks = [
   { href: "mailto:adyemotaiwom999@gmail.com", icon: <FaEnvelope size={28} /> },
@@ -13,7 +13,7 @@ const socialLinks = [
     href: "https://instagram.com/atmdesigns.dev",
     icon: <FaInstagram size={28} />,
   },
-  { href: "https://x.com/atmdesigns_dev", icon: <FaX size={28} /> }, // X
+  { href: "https://x.com/atmdesigns_dev", icon: <SiX size={28} /> },
 ];
 
 export default function ContactIcons() {
