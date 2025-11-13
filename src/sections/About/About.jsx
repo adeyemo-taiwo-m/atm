@@ -33,7 +33,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto flex flex-col lap:flex-row gap-20 items-center">
         {/* ==== IMAGE SIDE ==== */}
         <motion.img
-          src="/profile.png"
+          src="/profile.webp"
           alt="Adeyemo Taiwo"
           className="object-cover h-120 rounded-[54px] shadow-lg transform transition-all duration-500 ease-out hover:rotate-2 hover:scale-[1.03]"
           variants={leftVariant}
