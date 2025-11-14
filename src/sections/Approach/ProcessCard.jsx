@@ -9,8 +9,8 @@ function ProcessCard({ idx, step }) {
       {/* Monochrome animated border */}
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-neutral-100  to-neutral-300 opacity-30  transition-all duration-500 group-hover:opacity-100 pointer-events-none "></div>
 
-      <div className="relative space-y-2 z-10">
-        <div className="flex gap-4">
+      <div className="relative  space-y-2 z-10">
+        <div className="flex items-center gap-4">
           <div className="text-2xl  text-neutral-500 mb-4">{step.icon}</div>
           <h3 className="text-xl  text-neutral-900 font-semibold mb-2">
             {step.title}

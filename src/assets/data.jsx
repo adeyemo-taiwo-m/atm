@@ -56,7 +56,7 @@ export const projectsData = [
 export const steps = [
   {
     icon: (
-      <FaSearch className="hover:text-indigo-500 text-neutral-500 w-10 h-10" />
+      <FaSearch className="hover:text-indigo-500 text-neutral-500 w-8 h-8" />
     ),
     title: "Research & Understanding",
     description:
@@ -64,7 +64,7 @@ export const steps = [
   },
   {
     icon: (
-      <FaPaintBrush className="hover:text-pink-500 text-neutral-500 w-10 h-10" />
+      <FaPaintBrush className="hover:text-pink-500 text-neutral-500  w-8 h-8" />
     ),
     title: "Design & Wireframing",
     description:
@@ -72,7 +72,7 @@ export const steps = [
   },
   {
     icon: (
-      <FaCode className="hover:text-green-500 text-neutral-500  w-10 h-10" />
+      <FaCode className="hover:text-green-500 text-neutral-500   w-8 h-8" />
     ),
     title: "Development & Implementation",
     description:
@@ -80,7 +80,7 @@ export const steps = [
   },
   {
     icon: (
-      <FaCheckCircle className="hover:text-yellow-500 text-neutral-500 w-10 h-10" />
+      <FaCheckCircle className="hover:text-yellow-500 text-neutral-500 w-8 h-8" />
     ),
     title: "Testing & Feedback",
     description:
