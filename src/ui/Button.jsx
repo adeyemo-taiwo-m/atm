@@ -11,8 +11,8 @@ function Button({
   const styles = {
     primary: `
       tab:px-6  px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300
-      bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-black)]
-     hover:from-[var(--color-neutral-300)] hover:to-[var(--color-neutral-700)]
+      bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
+     hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
     `,
 
     secondary: `

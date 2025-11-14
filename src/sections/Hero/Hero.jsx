@@ -54,7 +54,9 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate="visible">
           <motion.div custom={0} variants={textVariants}>
-            <HeroText className="text-3xl text-black tab:text-5xl lap:text-7xl font-bold text-center">
+            <HeroText
+              className={`text-3xl {} text-neutral-900 tab:text-5xl lap:text-7xl font-bold text-center`}
+            >
               Turning Ideas into Functional, User-Friendly Web Experiences
             </HeroText>
           </motion.div>

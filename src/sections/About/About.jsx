@@ -2,6 +2,7 @@ import React from "react";
 // eslint-disable-next-line
 import { motion } from "framer-motion";
 import Heading from "../../ui/Heading";
+import useDarkMode from "../../hooks/useDarkMode";
 
 export default function About() {
   // Motion variants for left and right sides
@@ -24,7 +25,7 @@ export default function About() {
     },
     exit: { opacity: 0, x: 100, transition: { duration: 0.5 } },
   };
-
+  const { isDarkMode } = useDarkMode();
   return (
     <section
       id="about"
@@ -33,7 +34,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto flex flex-col lap:flex-row gap-20 items-center">
         {/* ==== IMAGE SIDE ==== */}
         <motion.img
-          src="/profile.webp"
+          src={`/image-${isDarkMode ? "dark" : "light"}.webp`}
           alt="Adeyemo Taiwo"
           className="object-cover h-120 rounded-[54px] shadow-lg transform transition-all duration-500 ease-out hover:rotate-2 hover:scale-[1.03]"
           variants={leftVariant}
@@ -71,7 +72,6 @@ export default function About() {
           </p>
 
           <ul className="mt-6 grid grid-cols-1 tab:grid-cols-3 gap-4 text-neutral-800">
-          
             <li>
               <strong>Focus</strong> <p>Frontend Development & UI Design</p>
             </li>
