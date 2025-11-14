@@ -11,7 +11,7 @@ function ProcessCard({ idx, step }) {
 
       <div className="relative space-y-2 z-10">
         <div className="flex gap-4">
-          <div className="text-5xl  text-neutral-500 mb-4">{step.icon}</div>
+          <div className="text-2xl  text-neutral-500 mb-4">{step.icon}</div>
           <h3 className="text-xl  text-neutral-900 font-semibold mb-2">
             {step.title}
           </h3>
