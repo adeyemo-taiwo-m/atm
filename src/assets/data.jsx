@@ -55,33 +55,25 @@ export const projectsData = [
 
 export const steps = [
   {
-    icon: (
-      <FaSearch className="hover:text-indigo-500 text-neutral-500 w-8 h-8" />
-    ),
+    icon: <FaSearch className="hover:text-indigo-500 text-neutral-500" />,
     title: "Research & Understanding",
     description:
       "I study the brand, audience, and goals to ensure every decision solves a real problem.",
   },
   {
-    icon: (
-      <FaPaintBrush className="hover:text-pink-500 text-neutral-500  w-8 h-8" />
-    ),
+    icon: <FaPaintBrush className="hover:text-pink-500 text-neutral-500  " />,
     title: "Design & Wireframing",
     description:
       "I create wireframes and prototypes in Figma to visualize the experience before development.",
   },
   {
-    icon: (
-      <FaCode className="hover:text-green-500 text-neutral-500   w-8 h-8" />
-    ),
+    icon: <FaCode className="hover:text-green-500 text-neutral-500  " />,
     title: "Development & Implementation",
     description:
       "I bring designs to life using React, Tailwind CSS, and JavaScript with a focus on performance and responsiveness.",
   },
   {
-    icon: (
-      <FaCheckCircle className="hover:text-yellow-500 text-neutral-500 w-8 h-8" />
-    ),
+    icon: <FaCheckCircle className="hover:text-yellow-500 text-neutral-500" />,
     title: "Testing & Feedback",
     description:
       "I test across devices, refine interactions, and iterate based on real feedback.",
