@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import ContactIcons from "./ContactIcons";
 import Heading from "../../ui/Heading";
-import useDarkMode from "../../hooks/useDarkMode";
 
 export default function Contact() {
   // Variant for slide-up animation
@@ -15,13 +14,10 @@ export default function Contact() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-  const { isDarkMode } = useDarkMode();
   return (
     <section
       id="contact"
-      className={`flex justify-center bg-${
-        isDarkMode ? "black" : "neutral-900"
-      } items-center rounded-t-3xl py-12 px-6 tab:px-12 lap:px-24 overflow-hidden relative`}
+      className={`flex justify-center bg-black items-center rounded-t-3xl py-12 px-6 tab:px-12 lap:px-24 overflow-hidden relative`}
     >
       {/* Optional overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/20 rounded-t-3xl pointer-events-none"></div>

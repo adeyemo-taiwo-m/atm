@@ -23,8 +23,8 @@ function Button({
 
     small: `
       px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-300
-      bg-gradient-to-r from-[var(--color-neutral-400)] to-[var(--color-neutral-800)]
-      hover:from-[var(--color-neutral-300)] hover:to-[var(--color-neutral-700)]
+       bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
+     hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
     `,
 
     secondarySmall: `
