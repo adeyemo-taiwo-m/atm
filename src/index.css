@@ -72,6 +72,8 @@
   --color-neutral-700: #57595a;
   --color-neutral-800: #363939;
   --color-neutral-900: #1f2223;
+  --color-white: #ffffff;
+
   /* Neutral Gradient (Gray → Charcoal) */
   /* --gradient-neutral: linear-gradient(90deg, #b1b2b2 0%, #363939 100%); */
 
@@ -128,8 +130,132 @@
   }
 }
 
+/* Dark */
+.dark {
+  /* Breakpoints remain the same */
+  --breakpoint-mob: initial;
+  --breakpoint-tab: 40rem;
+  --breakpoint-lap: 64rem;
+  --breakpoint-desk: 80rem;
+
+  /* Primary (Purple-Blue) — Darker, deeper tones */
+  --color-primary: #7866ff;
+  --color-primary-hover: #6a59f3;
+  --color-primary-active: #5c4bdd;
+
+  /* Divider */
+  --color-divider: #ffffff1a;
+
+  /* Secondary (Blue) */
+  --color-secondary: #4d8aff;
+  --color-secondary-hover: #4179e6;
+  --color-secondary-active: #3568c7;
+
+  /* Accent (Sky Blue) */
+  --color-accent: #67c9ff;
+  --color-accent-hover: #56b4eb;
+  --color-accent-active: #4699cb;
+
+  /* Light Cyan → Soft blue highlights */
+  --color-light: #2a3f4a;
+  --color-light-hover: #314954;
+  --color-light-active: #395462;
+
+  /* SUCCESS (Green) */
+  --color-success: #1ad1a5;
+  --color-success-hover: #16b38e;
+  --color-success-active: #129778;
+
+  --color-green-light: #1f3b35;
+  --color-green-light-hover: #24433d;
+  --color-green-light-active: #2c4e48;
+
+  /* WARNING (Yellow / Orange) */
+  --color-warning: #ffb545;
+  --color-warning-hover: #e79f34;
+  --color-warning-active: #c98b2c;
+
+  --color-yellow-light: #4a3b1f;
+  --color-yellow-light-hover: #554528;
+  --color-yellow-light-active: #665331;
+
+  /* ERROR (Red) */
+  --color-error: #ff5a67;
+  --color-error-hover: #e84855;
+  --color-error-active: #cc3945;
+
+  --color-red-light: #4d2326;
+  --color-red-light-hover: #59282b;
+  --color-red-light-active: #632e31;
+
+  /* NEUTRALS */
+  --color-neutral-100: #1e1f22;
+  --color-neutral-200: #26272b;
+  --color-neutral-300: #323337;
+  --color-neutral-400: #46474c;
+  --color-neutral-500: #5b5d62;
+  --color-neutral-600: #707276;
+  --color-neutral-700: #8b8d91;
+  --color-neutral-800: #b4b6ba;
+  --color-neutral-900: #e1e2e5;
+  --color-white: #000000;
+
+  /* Light/Background (dark mode versions) */
+  --color-light: #1f2a32;
+  --color-light-hover: #243039;
+  --color-light-active: #2a3842;
+
+  --color-white: #1b1c1f;
+  --color-white-hover: #222327;
+
+  /* Dark & Text */
+  --color-dark: #e8edf7;
+  --color-dark-hover: #d4dae7;
+  --color-dark-active: #c1c8d7;
+
+  --color-black: #ffffff;
+  --color-black-hover: #f0f0f0;
+
+  /* BRAND NEUTRAL TONES */
+  --color-content-bg: #121417;
+  --color-border: #2b2d31;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Gold */
+  --color-gold: #f6d17a;
+  --color-gold-hover: #e5c06a;
+  --color-gold-active: #d1aa55;
+
+  /* Animations stay unchanged */
+  --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
+  --animate-star-movement-top: star-movement-top linear infinite alternate;
+}
+/* Keyframes remain the same */
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
 body {
   font-family: "Bricolage Grotesque", sans-serif;
+  background-color: var(--color-white);
 }
 
 .beams-container {

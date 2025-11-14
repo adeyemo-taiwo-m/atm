@@ -1,5 +1,4 @@
 import { send } from "@emailjs/browser";
-
 // eslint-disable-next-line
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -33,7 +32,6 @@ export default function Booking() {
       });
   };
 
-  // Variant for slide-up
   const slideUpVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -54,14 +52,14 @@ export default function Booking() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
-          className="w-full max-w-6xl bg-white/70 rounded-3xl p-10 shadow-lg border border-gray-100"
+          className="w-full max-w-6xl bg-[var(--color-white)] rounded-3xl p-10 shadow-lg border border-[var(--color-neutral-200)]"
         >
           <div className="text-center">
-            <Heading className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <Heading className="text-3xl md:text-4xl font-bold text-[var(--color-neutral-900)] mb-4">
               Book a Service
             </Heading>
           </div>
-          <p className="text-gray-600 text-lg mb-8 text-center leading-relaxed">
+          <p className="text-[var(--color-neutral-700)] text-lg mb-8 text-center leading-relaxed">
             Fill in the form below and I’ll get back to you to discuss your
             project.
           </p>
@@ -76,14 +74,14 @@ export default function Booking() {
                   {...register("fullName", {
                     required: "Full Name is required",
                   })}
-                  className={`w-full px-4 py-3 rounded-xl border placeholder-gray-400 focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 rounded-xl border placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 ${
                     errors.fullName
-                      ? "border-red-500 focus:ring-red-300"
-                      : "border-gray-200 focus:ring-gray-300"
-                  }`}
+                      ? "border-[var(--color-error)] focus:ring-[var(--color-error-active)]"
+                      : "border-[var(--color-neutral-300)] focus:ring-[var(--color-neutral-200)]"
+                  } text-[var(--color-neutral-900)] bg-[var(--color-white)]`}
                 />
                 {errors.fullName && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-[var(--color-error)] text-sm mt-1">
                     {errors.fullName.message}
                   </p>
                 )}
@@ -101,14 +99,14 @@ export default function Booking() {
                       message: "Invalid email address",
                     },
                   })}
-                  className={`w-full px-4 py-3 rounded-xl border placeholder-gray-400 focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 rounded-xl border placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 ${
                     errors.email
-                      ? "border-red-500 focus:ring-red-300"
-                      : "border-gray-200 focus:ring-gray-300"
-                  }`}
+                      ? "border-[var(--color-error)] focus:ring-[var(--color-error-active)]"
+                      : "border-[var(--color-neutral-300)] focus:ring-[var(--color-neutral-200)]"
+                  } text-[var(--color-neutral-900)] bg-[var(--color-white)]`}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-[var(--color-error)] text-sm mt-1">
                     {errors.email.message}
                   </p>
                 )}
@@ -122,14 +120,14 @@ export default function Booking() {
                   {...register("phone", {
                     required: "Phone Number is required",
                   })}
-                  className={`w-full px-4 py-3 rounded-xl border placeholder-gray-400 focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 rounded-xl border placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 ${
                     errors.phone
-                      ? "border-red-500 focus:ring-red-300"
-                      : "border-gray-200 focus:ring-gray-300"
-                  }`}
+                      ? "border-[var(--color-error)] focus:ring-[var(--color-error-active)]"
+                      : "border-[var(--color-neutral-300)] focus:ring-[var(--color-neutral-200)]"
+                  } text-[var(--color-neutral-900)] bg-[var(--color-white)]`}
                 />
                 {errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-[var(--color-error)] text-sm mt-1">
                     {errors.phone.message}
                   </p>
                 )}
@@ -141,11 +139,11 @@ export default function Booking() {
                   {...register("service", {
                     required: "Please select a service",
                   })}
-                  className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 rounded-xl border placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 ${
                     errors.service
-                      ? "border-red-500 focus:ring-red-300"
-                      : "border-gray-200 focus:ring-gray-300"
-                  }`}
+                      ? "border-[var(--color-error)] focus:ring-[var(--color-error-active)]"
+                      : "border-[var(--color-neutral-300)] focus:ring-[var(--color-neutral-200)]"
+                  } text-[var(--color-neutral-900)] bg-[var(--color-white)]`}
                 >
                   <option value="" disabled>
                     Select Service Type
@@ -155,7 +153,7 @@ export default function Booking() {
                   <option value="consultation">Consultation</option>
                 </select>
                 {errors.service && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-[var(--color-error)] text-sm mt-1">
                     {errors.service.message}
                   </p>
                 )}
@@ -170,14 +168,14 @@ export default function Booking() {
                 {...register("projectDetails", {
                   required: "Project Details are required",
                 })}
-                className={`w-full px-4 py-3 rounded-xl border placeholder-gray-400 focus:outline-none focus:ring-2 ${
+                className={`w-full px-4 py-3 rounded-xl border placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 ${
                   errors.projectDetails
-                    ? "border-red-500 focus:ring-red-300"
-                    : "border-gray-200 focus:ring-gray-300"
-                }`}
+                    ? "border-[var(--color-error)] focus:ring-[var(--color-error-active)]"
+                    : "border-[var(--color-neutral-300)] focus:ring-[var(--color-neutral-200)]"
+                } text-[var(--color-neutral-900)] bg-[var(--color-white)]`}
               />
               {errors.projectDetails && (
-                <p className="text-red-500 text-sm mt-1">
+                <p className="text-[var(--color-error)] text-sm mt-1">
                   {errors.projectDetails.message}
                 </p>
               )}

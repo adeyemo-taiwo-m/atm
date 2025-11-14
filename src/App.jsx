@@ -10,6 +10,7 @@ import Header from "./ui/Header";
 
 import Booking from "./sections/booking/Booking";
 import DownloadSection from "./Documents/DownloadSection";
+import DarkModeProvider from "./contexts/DarkModeContext";
 function App() {
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -38,7 +39,7 @@ function App() {
 
   return (
     <>
-      <>
+      <DarkModeProvider>
         <div className="px-4 relative  tab:px-8 lap:px-12 desk:px-20">
           <Header />
           <Hero />
@@ -51,7 +52,7 @@ function App() {
           <DownloadSection />
         </div>
         <Contact />
-      </>
+      </DarkModeProvider>
     </>
   );
 }

@@ -20,7 +20,9 @@ function ProjectCard({ project, idx }) {
       {/* Content */}
       <div className="p-6 flex flex-col">
         <div>
-          <h3 className="text-xl font-semibold">{project.title}</h3>
+          <h3 className="text-xl text-neutral-900 font-semibold">
+            {project.title}
+          </h3>
           <p className="mt-2 text-neutral-700">{project.description}</p>
           <p className="mt-2 text-sm text-neutral-600">
             <strong>Role:</strong> {project.role}
