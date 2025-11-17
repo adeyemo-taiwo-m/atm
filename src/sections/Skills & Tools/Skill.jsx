@@ -36,7 +36,7 @@ export default function Skills() {
 
         {/* Skills Grid */}
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 lap:grid-cols-4 gap-6 place-items-center"
+          className="flex flex-wrap justify-center gap-6 lap:gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
