@@ -6,24 +6,22 @@ import useDarkMode from "../../hooks/useDarkMode";
 
 export default function About() {
   // Motion variants for left and right sides
-  const leftVariant = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-    exit: { opacity: 0, x: -100, transition: { duration: 0.5 } },
-  };
+  // const leftVariant = {
+  //   hidden: { opacity: 0, x: -10 },
+  //   visible: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: { duration: 0.8, ease: "easeOut" },
+  //   },
+  // };
 
   const rightVariant = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: { duration: 0.8, ease: "easeOut" },
     },
-    exit: { opacity: 0, x: 100, transition: { duration: 0.5 } },
   };
   const { isDarkMode } = useDarkMode();
   return (
@@ -33,15 +31,15 @@ export default function About() {
     >
       <div className="max-w-6xl mx-auto flex flex-col lap:flex-row gap-20 items-center">
         {/* ==== IMAGE SIDE ==== */}
-        <motion.img
+        <img
           src={`/image-${isDarkMode ? "dark" : "light"}.webp`}
           alt="Adeyemo Taiwo"
           className="object-cover h-120 rounded-[54px] shadow-lg transform transition-all duration-500 ease-out hover:rotate-2 hover:scale-[1.03]"
-          variants={leftVariant}
-          initial="hidden"
-          whileInView="visible"
-          exit="exit"
-          viewport={{ once: false, amount: 0.5 }}
+          // variants={leftVariant}
+          // initial="hidden"
+          // whileInView="visible"
+          // exit="exit"
+          // viewport={{ once: false, amount: 0.5 }}
         />
 
         {/* ==== TEXT SIDE ==== */}
@@ -50,7 +48,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           exit="exit"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <Heading>About Me</Heading>
           <p className="mt-4 text-neutral-700 leading-relaxed">
