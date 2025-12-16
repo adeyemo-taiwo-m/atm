@@ -7,6 +7,7 @@ import {
   SiAdobephotoshop,
   SiFramer,
   SiSupabase,
+  SiNextdotjs,
 } from "react-icons/si";
 export const projectsData = [
   {
@@ -30,6 +31,7 @@ export const projectsData = [
     liveLink: "https://optopcakes.vercel.app/", // replace with your actual live link
     designLink: "https://www.behance.net/gallery/236814881/Optopcakes", // replace with actual Behance link
   },
+
   {
     title: "NexCity Realty Landing Page",
     description:
@@ -50,6 +52,23 @@ export const projectsData = [
     image: "/weather.jpg", // make sure this image exists in your project folder
     liveLink: "https://weather-app-fm30-eta.vercel.app/", // replace with your actual live link
     designLink: "", // replace with your actual Behance link
+  },
+  {
+    title: "Kanour Digital Systems",
+    description:
+      "A modern enterprise platform that showcases Kanour’s expertise in designing, building, and deploying digital systems such as workflow automation tools, enterprise applications, and FinTech solutions to help companies operate faster, smarter, and more efficiently.",
+    role: "Frontend Developer / UI Engineer",
+    techStack: [
+      "NextJs",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Modern UI Architecture",
+    ],
+    image: "/kanour.png",
+    liveLink: "https://kanour.com",
+    designLink: "",
   },
 ];
 
@@ -109,6 +128,11 @@ export const skills = [
   { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
   { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    color: "#000000",
+  },
   { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
   { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
   { name: "GitHub", icon: <FaGithub />, color: "#181717" },
