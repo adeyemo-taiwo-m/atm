@@ -70,6 +70,23 @@ export const projectsData = [
     liveLink: "https://kanour.com",
     designLink: "",
   },
+  {
+    title: "Delite02 Logistics",
+    description:
+      "A modern logistics platform showcasing Delite02 Logistics' expertise in providing fast, reliable, and secure delivery services across Nigeria and beyond. Specializing in same-day delivery, interstate shipping, local e-commerce logistics, bulk freight, Payment on Delivery (POD), same-day remittance, and international shipping solutions to help businesses and individuals move goods efficiently, stress-free, and on time.",
+    role: "Frontend Developer / UI Engineer",
+    techStack: [
+      "NextJs",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Modern UI Architecture",
+    ],
+    image: "/delite02-logistics.svg",
+    liveLink: "https://www.delite02-logistics.com",
+    designLink: "",
+  },
 ];
 
 export const steps = [
