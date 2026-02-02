@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
-import Hero from "./sections/Hero/Hero";
-import About from "./sections/About/About";
-import Skills from "./sections/Skills & Tools/Skill";
-import Projects from "./sections/Projects/Projects";
-import Process from "./sections/Approach/Process";
-import Testimonials from "./sections/Testimonials/Testimonials";
-import Contact from "./sections/Contact section/Contact";
-import Header from "./ui/Header";
+"use client";
 
-import Booking from "./sections/booking/Booking";
-import DownloadSection from "./Documents/DownloadSection";
-import DarkModeProvider from "./contexts/DarkModeContext";
-function App() {
+import React, { useEffect } from "react";
+import Hero from "../sections/Hero/Hero";
+import About from "../sections/About/About";
+import Skills from "../sections/Skills & Tools/Skill";
+import Projects from "../sections/Projects/Projects";
+import Process from "../sections/Approach/Process";
+import Testimonials from "../sections/Testimonials/Testimonials";
+import Contact from "../sections/Contact section/Contact";
+import Header from "../ui/Header";
+
+import Booking from "../sections/booking/Booking";
+import DownloadSection from "../Documents/DownloadSection";
+import DarkModeProvider from "../contexts/DarkModeContext";
+
+export default function Home() {
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -27,7 +30,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.5 } // section is 50% visible
+      { threshold: 0.5 }, // section is 50% visible
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -56,5 +59,3 @@ function App() {
     </>
   );
 }
-
-export default App;
