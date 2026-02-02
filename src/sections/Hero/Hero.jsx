@@ -1,47 +1,16 @@
 import React from "react";
 // eslint-disable-next-line
 import { motion } from "framer-motion";
-import HeroText from "./HeroText";
 import Button from "../../ui/Button";
+import Heading from "../../ui/Heading";
 
 export default function Hero() {
-  // Variants for texts with bounce ("rubber") effect
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 12,
-        delay: i * 0.3,
-      },
-    }),
-  };
-
-  // Variant for buttons
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 12,
-        delay: 1.2, // after texts
-      },
-    },
-  };
-
-  // Scroll into sections
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({
-        behavior: "smooth", // smooth scrolling
-        block: "start", // scroll so section aligns at top
+        behavior: "smooth",
+        block: "start",
       });
     }
   }
@@ -49,47 +18,159 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="py-20 px-6 md:px-12 lg:px-24 mt-20 text-center"
+      className="relative w-full min-h-screen pt-32 pb-20 flex flex-col items-center justify-start overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto">
-        <motion.div initial="hidden" animate="visible">
-          <motion.div custom={0} variants={textVariants}>
-            <HeroText
-              className={`text-3xl {} text-black tab:text-5xl lap:text-7xl font-bold text-center`}
-            >
-              Turning Ideas into Functional, User-Friendly Web Experiences
-            </HeroText>
-          </motion.div>
+      {/* Background/Decoration if needed - kept clean for now */}
 
-          <motion.div custom={2} variants={textVariants}>
-            <HeroText
-              text={""}
-              className="mt-4 text-lg tab:text-xl text-neutral-700"
-              duration={0.00000005}
-            >
-              I’m Taiwo Adeyemo — a Frontend Developer and UI Designer
-              passionate about building digital solutions that help businesses
-              grow.
-            </HeroText>
-          </motion.div>
-
-          <motion.div
-            className="mt-8 flex justify-center gap-4"
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <Button
-              variant="secondary"
-              onClick={() => scrollToSection("projects")}
-            >
-              View My Work
-            </Button>
-            <Button onClick={() => scrollToSection("booking")}>
-              Let’s Collaborate
-            </Button>
-          </motion.div>
+      <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
+        {/* Top Text Group */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative z-20 flex items-center justify-center gap-4 mb-8"
+        >
+          <span className="font-serif italic text-5xl md:text-6xl lg:text-7xl text-[var(--color-dark)] font-light">
+            I&apos;m a
+          </span>
         </motion.div>
+
+        {/* Massive Text */}
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="relative z-0 text-[14vw] md:text-[12vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
+        >
+          <span
+            className="gradient-text"
+            style={{ backgroundImage: "var(--gradient-neutral)" }}
+          >
+            DESIGN
+          </span>
+          <span
+            className="gradient-text"
+            style={{ backgroundImage: "var(--gradient-neutral)" }}
+          >
+            ENGINEER
+          </span>
+        </motion.h1>
+
+        {/* Central Image - Positioned to look like it's popping out */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="absolute top-[15%] md:top-[12%] lg:top-[8%] left-1/2 -translate-x-1/2 z-10 w-[340px] md:w-[600px] lg:w-[750px] h-auto pointer-events-none"
+        >
+          <img
+            src="/profile.svg"
+            alt="Taiwo Adeyemo"
+            className="w-full h-full object-cover object-top drop-shadow-2xl opacity-100 hover:grayscale-0 transition-all duration-500 mask-image-b-transparent"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 90%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 90%, transparent 100%)",
+            }}
+          />
+        </motion.div>
+
+        {/* Floating Context Pills/Text - Adjusted positioning logic if needed, but absolute works relative to container */}
+        {/* Left Side Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1 }}
+          className="hidden md:block absolute left-4 lg:left-10 top-[40%] text-left"
+        >
+          <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4"></div>
+          <p className="text-xl md:text-2xl font-serif italic text-[var(--color-dark)]">
+            Frontend
+            <br />
+            Developer
+          </p>
+        </motion.div>
+
+        {/* Right Side Info */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.1 }}
+          className="hidden md:block absolute right-4 lg:right-10 top-[40%] text-right"
+        >
+          <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4 ml-auto"></div>
+          <p className="text-xl md:text-2xl font-serif italic text-[var(--color-dark)]">
+            UI/UX
+            <br />
+            Designer
+          </p>
+        </motion.div>
+
+        {/* Bottom Area - Gradient Shape */}
+        {/* About Content Box */}
+        <div
+          id="about"
+          className="relative w-full z-20 rounded-t-[50px] md:rounded-t-[80px] px-6 py-16 md:py-24 mt-48 md:mt-60"
+          style={{
+            background:
+              "linear-gradient(to bottom, var(--color-neutral-900), var(--color-black))",
+            // boxShadow: "0 -20px 50px rgba(0,0,0,0.5)",
+          }}
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <Heading className="!text-white mb-4">About Me</Heading>
+
+            <p className="text-neutral-300 leading-relaxed text-xl md:text-xl mb-6">
+              Hi! I’m Taiwo, a Frontend Developer and UI/UX Designer. I help
+              businesses and brands{" "}
+              <strong className="text-white">
+                create clean, responsive, and intuitive web experiences
+              </strong>{" "}
+              that engage users and drive results. My work ensures your digital
+              presence is professional, accessible, and easy to navigate.
+            </p>
+            <p className="text-neutral-300 leading-relaxed text-xl md:text-xl mb-12">
+              I specialize in{" "}
+              <strong className="text-white">
+                turning ideas into interactive digital products
+              </strong>
+              — from designing user-friendly interfaces to developing
+              functional, high-performing web applications. Whether you want to
+              digitize your services, improve your customer experience, or grow
+              your online presence, I provide solutions that make your business
+              stand out.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                <strong className="block text-white text-xl mb-2">Focus</strong>
+                <p className="text-neutral-400">
+                  Frontend Development & UI Design
+                </p>
+              </div>
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                <strong className="block text-white text-xl mb-2">Goal</strong>
+                <p className="text-neutral-400">
+                  Build impactful digital products for businesses
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Pills Cluster */}
+      <div className="hidden lg:flex absolute bottom-10 left-0 w-full justify-center items-end gap-4 z-40 pointer-events-none opacity-0 md:opacity-100">
+        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif italic transform -rotate-6">
+          Product Design
+        </div>
+        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-bold mb-8">
+          Websites
+        </div>
+        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif transform rotate-3">
+          Mobile Apps
+        </div>
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ export default function Home() {
         <div className="px-4 relative  tab:px-8 lap:px-12 desk:px-20">
           <Header />
           <Hero />
-          <About />
+          {/* <About /> */}
           <Skills />
           <Projects />
           <Process />

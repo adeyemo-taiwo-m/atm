@@ -257,6 +257,10 @@ body {
   background-color: var(--color-white);
 }
 
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
 .beams-container {
   position: relative;
   width: 100%;
