@@ -73,7 +73,7 @@ export const projectsData = [
   {
     title: "Delite02 Logistics",
     description:
-      "A modern logistics platform showcasing Delite02 Logistics' expertise in providing fast, reliable, and secure delivery services across Nigeria and beyond. Specializing in same-day delivery, interstate shipping, local e-commerce logistics, bulk freight, Payment on Delivery (POD), same-day remittance, and international shipping solutions to help businesses and individuals move goods efficiently, stress-free, and on time.",
+      "Delite02 Logistics is a modern platform offering fast, reliable, and secure delivery across Nigeria and beyond. We specialize in same-day delivery, interstate shipping, local e-commerce logistics, bulk freight, Payment on Delivery (POD), same-day remittance, international shipping, and real-time tracking — helping businesses and individuals move goods efficiently, stress-free, and always on time.",
     role: "Frontend Developer / UI Engineer",
     techStack: [
       "NextJs",

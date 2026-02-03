@@ -22,7 +22,7 @@ export default function Hero() {
     >
       {/* Background/Decoration if needed - kept clean for now */}
 
-      <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
+      <div className="relative w-full max-w-[1400px] mx-auto px-4 tab:px-6 lap:px-8 flex flex-col items-center text-center z-10">
         {/* Top Text Group */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="relative z-20 flex items-center justify-center gap-4 mb-8"
         >
-          <span className="font-serif italic text-5xl md:text-6xl lg:text-7xl text-[var(--color-dark)] font-light">
+          <span className="font-serif italic text-2xl tab:text-6xl lap:text-7xl text-[var(--color-dark)] font-light">
             I&apos;m a
           </span>
         </motion.div>
@@ -40,7 +40,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative z-0 text-[14vw] md:text-[12vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
+          className="relative z-0 text-[14vw] tab:text-[12vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
         >
           <span
             className="gradient-text"
@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute top-[15%] md:top-[12%] lg:top-[8%] left-1/2 -translate-x-1/2 z-10 w-[340px] md:w-[600px] lg:w-[750px] h-auto pointer-events-none"
+          className="absolute top-[10%] tab:top-[12%] lap:top-[8%] left-1/2 -translate-x-1/2 z-10 w-[200px] tab:w-[400px]  h-auto pointer-events-none"
         >
           <img
             src="/profile.svg"
@@ -78,14 +78,14 @@ export default function Hero() {
 
         {/* Floating Context Pills/Text - Adjusted positioning logic if needed, but absolute works relative to container */}
         {/* Left Side Info */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1 }}
-          className="hidden md:block absolute left-4 lg:left-10 top-[40%] text-left"
+          className="hidden tab:block absolute left-4 lap:left-10 top-[40%] text-left"
         >
           <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4"></div>
-          <p className="text-xl md:text-2xl font-serif italic text-[var(--color-dark)]">
+          <p className="text-xl tab:text-2xl font-serif italic text-[var(--color-dark)]">
             Frontend
             <br />
             Developer
@@ -93,25 +93,25 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Side Info */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.1 }}
-          className="hidden md:block absolute right-4 lg:right-10 top-[40%] text-right"
+          className="hidden tab:block absolute right-4 lap:right-10 top-[40%] text-right"
         >
           <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4 ml-auto"></div>
-          <p className="text-xl md:text-2xl font-serif italic text-[var(--color-dark)]">
+          <p className="text-xl tab:text-2xl font-serif italic text-[var(--color-dark)]">
             UI/UX
             <br />
             Designer
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Area - Gradient Shape */}
         {/* About Content Box */}
         <div
           id="about"
-          className="relative w-full z-20 rounded-t-[50px] md:rounded-t-[80px] px-6 py-16 md:py-24 mt-48 md:mt-60"
+          className="relative w-full z-20 rounded-t-[50px] tab:rounded-t-[80px] px-6 py-16 tab:py-24 mt-48 tab:mt-60"
           style={{
             background:
               "linear-gradient(to bottom, var(--color-neutral-900), var(--color-black))",
@@ -121,28 +121,23 @@ export default function Hero() {
           <div className="max-w-4xl mx-auto text-center">
             <Heading className="!text-white mb-4">About Me</Heading>
 
-            <p className="text-neutral-300 leading-relaxed text-xl md:text-xl mb-6">
-              Hi! I’m Taiwo, a Frontend Developer and UI/UX Designer. I help
-              businesses and brands{" "}
+            <p className="text-neutral-300 leading-relaxed text-xl tab:text-xl mb-6">
+              Hi! I’m Taiwo, a Frontend Developer & UI/UX Designer. I create{" "}
               <strong className="text-white">
-                create clean, responsive, and intuitive web experiences
+                clean, responsive, and intuitive web experiences
               </strong>{" "}
-              that engage users and drive results. My work ensures your digital
-              presence is professional, accessible, and easy to navigate.
-            </p>
-            <p className="text-neutral-300 leading-relaxed text-xl md:text-xl mb-12">
-              I specialize in{" "}
-              <strong className="text-white">
-                turning ideas into interactive digital products
-              </strong>
-              — from designing user-friendly interfaces to developing
-              functional, high-performing web applications. Whether you want to
-              digitize your services, improve your customer experience, or grow
-              your online presence, I provide solutions that make your business
-              stand out.
+              that help businesses engage users and grow.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
+            <p className="text-neutral-300 leading-relaxed text-xl tab:text-xl mb-12">
+              I specialize in turning ideas into{" "}
+              <strong className="text-white">
+                beautiful, high-performing digital products
+              </strong>{" "}
+              — from thoughtful UI/UX design to fast, modern web development.
+            </p>
+
+            <div className="grid grid-cols-1 tab:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                 <strong className="block text-white text-xl mb-2">Focus</strong>
                 <p className="text-neutral-400">
@@ -161,7 +156,7 @@ export default function Hero() {
       </div>
 
       {/* Floating Pills Cluster */}
-      <div className="hidden lg:flex absolute bottom-10 left-0 w-full justify-center items-end gap-4 z-40 pointer-events-none opacity-0 md:opacity-100">
+      <div className="hidden lap:flex absolute bottom-10 left-0 w-full justify-center items-end gap-4 z-40 pointer-events-none opacity-0 tab:opacity-100">
         <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif italic transform -rotate-6">
           Product Design
         </div>
