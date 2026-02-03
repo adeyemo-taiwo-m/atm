@@ -40,7 +40,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative z-0 text-[14vw] tab:text-[12vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
+          className="relative z-0 text-[14vw] tab:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
         >
           <span
             className="gradient-text"
