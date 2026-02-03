@@ -111,42 +111,41 @@ export default function Hero() {
         {/* About Content Box */}
         <div
           id="about"
-          className="relative w-full z-20 rounded-t-[50px] tab:rounded-t-[80px] px-6 py-16 tab:py-24 mt-48 tab:mt-60"
-          style={{
-            background:
-              "linear-gradient(to bottom, var(--color-neutral-900), var(--color-black))",
-            // boxShadow: "0 -20px 50px rgba(0,0,0,0.5)",
-          }}
+          className="relative w-full z-20 rounded-t-[50px] tab:rounded-t-[80px] px-6 py-16 tab:py-24 mt-48 tab:mt-60 bg-[var(--color-neutral-100)]"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <Heading className="!text-white mb-4">About Me</Heading>
+            <Heading className="mb-4">About Me</Heading>
 
-            <p className="text-neutral-300 leading-relaxed text-xl tab:text-xl mb-6">
+            <p className="text-[var(--color-neutral-600)] leading-relaxed text-xl tab:text-xl mb-6">
               Hi! I’m Taiwo, a Frontend Developer & UI/UX Designer. I create{" "}
-              <strong className="text-white">
+              <strong className="text-[var(--color-dark)]">
                 clean, responsive, and intuitive web experiences
               </strong>{" "}
               that help businesses engage users and grow.
             </p>
 
-            <p className="text-neutral-300 leading-relaxed text-xl tab:text-xl mb-12">
+            <p className="text-[var(--color-neutral-600)] leading-relaxed text-xl tab:text-xl mb-12">
               I specialize in turning ideas into{" "}
-              <strong className="text-white">
+              <strong className="text-[var(--color-dark)]">
                 beautiful, high-performing digital products
               </strong>{" "}
               — from thoughtful UI/UX design to fast, modern web development.
             </p>
 
             <div className="grid grid-cols-1 tab:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
-              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <strong className="block text-white text-xl mb-2">Focus</strong>
-                <p className="text-neutral-400">
+              <div className="bg-[var(--color-white)] p-6 rounded-2xl border border-[var(--color-border)] shadow-sm hover:shadow-md transition-all">
+                <strong className="block text-[var(--color-dark)] text-xl mb-2">
+                  Focus
+                </strong>
+                <p className="text-[var(--color-neutral-600)]">
                   Frontend Development & UI Design
                 </p>
               </div>
-              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <strong className="block text-white text-xl mb-2">Goal</strong>
-                <p className="text-neutral-400">
+              <div className="bg-[var(--color-white)] p-6 rounded-2xl border border-[var(--color-border)] shadow-sm hover:shadow-md transition-all">
+                <strong className="block text-[var(--color-dark)] text-xl mb-2">
+                  Goal
+                </strong>
+                <p className="text-[var(--color-neutral-600)]">
                   Build impactful digital products for businesses
                 </p>
               </div>
