@@ -40,9 +40,9 @@ export default function DownloadSection() {
           <Button
             variant="primary"
             className="w-full lap:w-auto"
-            onClick={() => window.open("/taiwo-resume.docx", "_blank")}
+            onClick={() => window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")}
           >
-            <FaDownload /> Download CV
+            <FaDownload /> Download my CV
           </Button>
 
           {/* Secondary Button for Call */}

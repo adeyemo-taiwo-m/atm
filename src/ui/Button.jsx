@@ -10,34 +10,38 @@ function Button({
 }) {
   const styles = {
     primary: `
-      tab:px-6  px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300
+      tab:px-6 px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300 transform
       bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
-     hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
+      hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
+      hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-110
     `,
 
     secondary: `
-      tab:px-6 px-3 text-sm tab:text-base py-4 tab:py-3 rounded-md text-[var(--color-neutral-800)] font-medium border border-[var(--color-neutral-300)] transition-all duration-300
+      tab:px-6 px-3 text-sm tab:text-base py-4 tab:py-3 rounded-md text-[var(--color-neutral-800)] font-medium border border-[var(--color-neutral-300)] transition-all duration-300 transform
       bg-gradient-to-r from-[var(--color-neutral-100)] to-[var(--color-neutral-300)]
       hover:from-[var(--color-neutral-200)] hover:to-[var(--color-neutral-400)]
+      hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-105
     `,
 
     small: `
-      px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-300
-       bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
-     hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
+      px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-300 transform
+      bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
+      hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
+      hover:shadow-md hover:scale-105 active:scale-95 hover:brightness-110
     `,
 
     secondarySmall: `
-      px-3 py-1.5 rounded-md text-[var(--color-neutral-800)] text-sm font-medium border border-[var(--color-neutral-300)] transition-all duration-300
+      px-3 py-1.5 rounded-md text-[var(--color-neutral-800)] text-sm font-medium border border-[var(--color-neutral-300)] transition-all duration-300 transform
       bg-gradient-to-r from-[var(--color-neutral-100)] to-[var(--color-neutral-300)]
       hover:from-[var(--color-neutral-200)] hover:to-[var(--color-neutral-400)]
+      hover:shadow-md hover:scale-105 active:scale-95 hover:brightness-105
     `,
 
     whatsappLight: `
-  flex items-center justify-center gap-2 px-4 py-2 rounded-md text-[var(--color-neutral-900)] font-medium 
-  bg-white/70 backdrop-blur-sm border border-[#25D366] transition-all duration-300
-  hover:bg-white
-`,
+      flex items-center justify-center gap-2 px-4 py-2 rounded-md text-[var(--color-neutral-900)] font-medium 
+      bg-white/70 backdrop-blur-sm border border-[#25D366] transition-all duration-300 transform
+      hover:bg-white hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-105
+    `,
   };
 
   return (

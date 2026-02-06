@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "../../ui/Button";
 import Heading from "../../ui/Heading";
+import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
   function scrollToSection(id) {
@@ -151,6 +152,17 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          <div className="mt-10 flex justify-center w-full">
+            <Button
+              variant="primary"
+              className="w-full lap:w-auto"
+              onClick={() =>
+                window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")
+              }
+            >
+              <FaDownload /> Download My Resume
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -160,7 +172,7 @@ export default function Hero() {
           Product Design
         </div>
         <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-bold mb-8">
-          Websites
+          Website Development
         </div>
         <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif transform rotate-3">
           Mobile Apps
@@ -169,3 +181,11 @@ export default function Hero() {
     </section>
   );
 }
+
+//  <Button
+//             variant="primary"
+//             className="w-full lap:w-auto"
+//             onClick={() => window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")}
+//           >
+//             <FaDownload /> Download CV
+//           </Button>

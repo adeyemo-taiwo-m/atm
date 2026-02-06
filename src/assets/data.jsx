@@ -13,9 +13,9 @@ export const projectsData = [
   {
     title: "NexCity Realty",
     description:
-      "A modern real estate web app for exploring and managing property listings.",
+      "Modern real estate platform for browsing, exploring, and managing property listings with a clean and intuitive interface.",
     role: "UI/UX Design & Frontend Development",
-    techStack: ["React", "Javascript", "Tailwind CSS"],
+    techStack: ["React", "JavaScript", "Tailwind CSS"],
     image: "/nexcity.png",
     liveLink: "https://nex-city-reality-dashboard.vercel.app/",
     designLink:
@@ -24,47 +24,34 @@ export const projectsData = [
   {
     title: "Optopcakes & Tools",
     description:
-      "A web app for managing and ordering bakery items, making it easier for customers to explore products and place orders online.",
+      "Online bakery platform that lets customers browse products, view details, and place orders easily and conveniently.",
     role: "UI/UX Design & Frontend Development",
     techStack: ["Figma", "React", "Tailwind CSS"],
     image: "/optopcakes.png",
-    liveLink: "https://optopcakes.vercel.app/", // replace with your actual live link
-    designLink: "https://www.behance.net/gallery/236814881/Optopcakes", // replace with actual Behance link
-  },
-
-  {
-    title: "NexCity Realty Landing Page",
-    description:
-      "A modern, responsive landing page for a real estate platform showcasing property listings and services.",
-    role: "UI/UX Design",
-    techStack: ["Figma", "UI/UX Design", "Responsive Design"],
-    image: "/nexcity-landing.png", // make sure this image exists in your /public/projects folder
-    liveLink: "https://nextcity-realestate.onrender.com",
-    designLink:
-      "https://www.behance.net/gallery/238470147/NexCity-Landing-Page",
+    liveLink: "https://optopcakes.vercel.app/",
+    designLink: "https://www.behance.net/gallery/236814881/Optopcakes",
   },
   {
     title: "Weather App",
     description:
-      "A responsive web app that shows real-time weather updates, forecasts, and climate details for any location.",
+      "Responsive weather application displaying real-time conditions, forecasts, and detailed climate information for any location.",
     role: "Frontend Developer",
     techStack: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
-    image: "/weather.jpg", // make sure this image exists in your project folder
-    liveLink: "https://weather-app-fm30-eta.vercel.app/", // replace with your actual live link
-    designLink: "", // replace with your actual Behance link
+    image: "/weather.jpg",
+    liveLink: "https://weather-app-fm30-eta.vercel.app/",
+    designLink: "",
   },
   {
     title: "Kanour Digital Systems",
     description:
-      "A modern enterprise platform that showcases Kanour’s expertise in designing, building, and deploying digital systems such as workflow automation tools, enterprise applications, and FinTech solutions to help companies operate faster, smarter, and more efficiently.",
+      "Enterprise showcase platform highlighting expertise in workflow automation, custom applications, and fintech digital solutions.",
     role: "Frontend Developer / UI Engineer",
     techStack: [
-      "NextJs",
+      "Next.js",
       "React",
       "JavaScript",
       "Tailwind CSS",
       "Responsive Design",
-      "Modern UI Architecture",
     ],
     image: "/kanour.png",
     liveLink: "https://kanour.com",
@@ -73,19 +60,29 @@ export const projectsData = [
   {
     title: "Delite02 Logistics",
     description:
-      "Delite02 Logistics is a modern platform offering fast, reliable, and secure delivery across Nigeria and beyond. We specialize in same-day delivery, interstate shipping, local e-commerce logistics, bulk freight, Payment on Delivery (POD), same-day remittance, international shipping, and real-time tracking — helping businesses and individuals move goods efficiently, stress-free, and always on time.",
+      "Modern logistics platform offering fast delivery, same-day service, interstate shipping, real-time tracking, and POD across Nigeria.",
     role: "Frontend Developer / UI Engineer",
     techStack: [
-      "NextJs",
+      "Next.js",
       "React",
       "JavaScript",
       "Tailwind CSS",
       "Responsive Design",
-      "Modern UI Architecture",
     ],
     image: "/delite02-logistics.svg",
     liveLink: "https://www.delite02-logistics.com",
     designLink: "",
+  },
+  {
+    title: "NexCity Realty Landing Page",
+    description:
+      "Clean and modern landing page for real estate services, featuring property showcases and key information.",
+    role: "UI/UX Design",
+    techStack: ["Figma", "UI/UX Design", "Responsive Design"],
+    image: "/nexcity-landing.png",
+    liveLink: "https://nextcity-realestate.onrender.com",
+    designLink:
+      "https://www.behance.net/gallery/238470147/NexCity-Landing-Page",
   },
 ];
 
