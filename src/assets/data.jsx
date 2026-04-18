@@ -77,12 +77,22 @@ export const projectsData = [
     title: "NexCity Realty Landing Page",
     description:
       "Clean and modern landing page for real estate services, featuring property showcases and key information.",
-    role: "UI/UX Design",
-    techStack: ["Figma", "UI/UX Design", "Responsive Design"],
+    role: "UI/UX Design & Frontend Development",
+    techStack: ["Figma", "UI/UX Design", "HTML", "CSS"],
     image: "/nexcity-landing.png",
     liveLink: "https://nextcity-realestate.onrender.com",
     designLink:
       "https://www.behance.net/gallery/238470147/NexCity-Landing-Page",
+  },
+  {
+    title: "CampusKobo - Student Finance App",
+    description:
+      "A personal finance app that helps university students track expenses, manage budgets and hit savings goals in under 5 seconds a day.",
+    role: "UI/UX Design",
+    techStack: ["Figma", "UI/UX Design", "Responsive Design"],
+    image: "/campus-kobo.png.png",
+    designLink:
+      "https://www.behance.net/gallery/247651931/CampusKobo-Mobile-App",
   },
 ];
 

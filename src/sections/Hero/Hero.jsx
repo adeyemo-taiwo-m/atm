@@ -182,10 +182,3 @@ export default function Hero() {
   );
 }
 
-//  <Button
-//             variant="primary"
-//             className="w-full lap:w-auto"
-//             onClick={() => window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")}
-//           >
-//             <FaDownload /> Download CV
-//           </Button>
