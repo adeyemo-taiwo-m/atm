@@ -47,7 +47,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute top-[12%] tab:top-[15%] lap:top-[10%] left-1/2 -translate-x-1/2 z-10 w-[280px] tab:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-md shadow-2xl flex items-end justify-center group"
+          className="absolute top-[12%] tab:top-[15%] lap:top-[10%] left-1/2 -translate-x-1/2 z-10 w-[280px] tab:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl flex items-end justify-center group"
         >
           <img
             src="/profile.svg"
