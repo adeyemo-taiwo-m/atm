@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram, FaBehance } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
 const socialLinks = [
@@ -9,6 +9,10 @@ const socialLinks = [
     icon: <FaLinkedin size={28} />,
   },
   { href: "https://github.com/adeyemo-taiwo-m", icon: <FaGithub size={28} /> },
+  {
+    href: "https://www.behance.net/adeyemotaiwom",
+    icon: <FaBehance size={28} />,
+  },
   {
     href: "https://instagram.com/atmdesigns.dev",
     icon: <FaInstagram size={28} />,

@@ -100,7 +100,7 @@ export default function Header() {
                 variant="secondarySmall"
                 className="!p-2"
                 onClick={() =>
-                  window.open("https://www.behance.net/atmdesigns_dev", "_blank")
+                  window.open("https://www.behance.net/adeyemotaiwom", "_blank")
                 }
               >
                 <FaBehance className="text-xl" />
@@ -189,7 +189,7 @@ export default function Header() {
                     className="w-full justify-start"
                     onClick={() =>
                       window.open(
-                        "https://www.behance.net/atmdesigns_dev",
+                        "https://www.behance.net/adeyemotaiwom",
                         "_blank",
                       )
                     }
