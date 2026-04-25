@@ -60,7 +60,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative lap:absolute lap:top-[55%] lap:left-1/2 lap:-translate-x-1/2 lap:-translate-y-1/2 z-10 w-[280px] tab:w-[400px] lap:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden flex items-end justify-center group mt-8 lap:mt-0 mx-auto"
+          className="relative lap:absolute lap:top-[68%] lap:left-1/2 lap:-translate-x-1/2 lap:-translate-y-1/2 z-10 w-[280px] tab:w-[400px] lap:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden flex items-end justify-center group mt-8 lap:mt-0 mx-auto"
         >
           <img
             src="/profile.svg"
