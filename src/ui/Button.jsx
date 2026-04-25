@@ -10,37 +10,35 @@ function Button({
 }) {
   const styles = {
     primary: `
-      tab:px-6 px-3 tab:text-base text-sm py-4 tab:py-3 rounded-md text-white font-medium transition-all duration-300 transform
-      bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
-      hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
-      hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-110
+      tab:px-6 px-4 tab:text-base text-sm py-4 tab:py-3 rounded-2xl text-white font-bold uppercase tracking-wider transition-all duration-300 transform
+      bg-gradient-to-r from-violet-600 to-indigo-600
+      hover:from-violet-500 hover:to-indigo-500
+      hover:shadow-[0_0_20px_rgba(92,78,187,0.4)] hover:scale-105 active:scale-95
     `,
 
     secondary: `
-      tab:px-6 px-3 text-sm tab:text-base py-4 tab:py-3 rounded-md text-[var(--color-neutral-800)] font-medium border border-[var(--color-neutral-300)] transition-all duration-300 transform
-      bg-gradient-to-r from-[var(--color-neutral-100)] to-[var(--color-neutral-300)]
-      hover:from-[var(--color-neutral-200)] hover:to-[var(--color-neutral-400)]
-      hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-105
+      tab:px-6 px-4 text-sm tab:text-base py-4 tab:py-3 rounded-2xl text-[var(--color-dark)] font-bold uppercase tracking-wider border border-[var(--color-neutral-200)] transition-all duration-300 transform
+      bg-white
+      hover:bg-[var(--color-neutral-50)]
+      hover:shadow-lg hover:scale-105 active:scale-95
     `,
 
     small: `
-      px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-300 transform
-      bg-gradient-to-r from-[var(--color-neutral-600)] via-[var(--color-neutral-900)] to-[var(--color-neutral-900)]
-      hover:from-[var(--color-neutral-500)] hover:via-[var(--color-neutral-800)] hover:to-[var(--color-neutral-900)]
-      hover:shadow-md hover:scale-105 active:scale-95 hover:brightness-110
+      px-4 py-2 rounded-xl text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 transform
+      bg-gradient-to-r from-violet-600 to-indigo-600
+      hover:shadow-md hover:scale-105 active:scale-95
     `,
 
     secondarySmall: `
-      px-3 py-1.5 rounded-md text-[var(--color-neutral-800)] text-sm font-medium border border-[var(--color-neutral-300)] transition-all duration-300 transform
-      bg-gradient-to-r from-[var(--color-neutral-100)] to-[var(--color-neutral-300)]
-      hover:from-[var(--color-neutral-200)] hover:to-[var(--color-neutral-400)]
-      hover:shadow-md hover:scale-105 active:scale-95 hover:brightness-105
+      px-4 py-2 rounded-xl text-[var(--color-dark)] text-xs font-bold uppercase tracking-wider border border-[var(--color-neutral-200)] bg-white transition-all duration-300 transform
+      hover:bg-[var(--color-neutral-50)]
+      hover:shadow-md hover:scale-105 active:scale-95
     `,
 
     whatsappLight: `
-      flex items-center justify-center gap-2 px-4 py-2 rounded-md text-[var(--color-neutral-900)] font-medium 
+      flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-[var(--color-neutral-900)] font-bold text-xs uppercase tracking-wider
       bg-white/70 backdrop-blur-sm border border-[#25D366] transition-all duration-300 transform
-      hover:bg-white hover:shadow-lg hover:scale-105 active:scale-95 hover:brightness-105
+      hover:bg-white hover:shadow-lg hover:scale-105 active:scale-95
     `,
   };
 

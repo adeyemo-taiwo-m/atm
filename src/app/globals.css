@@ -255,10 +255,28 @@
 body {
   font-family: "Bricolage Grotesque", sans-serif;
   background-color: var(--color-white);
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .heading {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.01em;
 }
 
 .font-serif {
   font-family: "Playfair Display", serif;
+}
+
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle at center, rgba(91, 60, 242, 0.05) 0%, transparent 70%);
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
 }
 
 .beams-container {

@@ -1,5 +1,4 @@
 import React from "react";
-// eslint-disable-next-line
 import { motion, useAnimation } from "framer-motion";
 import { testimonials } from "../../assets/data";
 import Heading from "../../ui/Heading";
@@ -8,7 +7,6 @@ export default function Testimonials() {
   const controls = useAnimation();
 
   React.useEffect(() => {
-    // Start infinite scroll only for laptop and above
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         controls.start({
@@ -17,7 +15,7 @@ export default function Testimonials() {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 20,
+              duration: 25,
               ease: "linear",
             },
           },
@@ -33,57 +31,55 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", handleResize);
   }, [controls]);
 
-  // Animation for slide-up appearance
   const cardVariant = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: (i = 1) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2,
-        duration: 0.6,
+        delay: i * 0.1,
+        duration: 0.5,
         ease: "easeOut",
       },
     }),
   };
 
+  const Badge = ({ mode }) => {
+    const styles = {
+      design: "bg-violet-50 text-violet-600 border-violet-100",
+      development: "bg-blue-50 text-blue-600 border-blue-100",
+      all: "bg-gradient-to-r from-violet-50 to-blue-50 text-violet-700 border-violet-100"
+    };
+    const labels = {
+      design: "Design",
+      development: "Dev",
+      all: "Design + Dev"
+    };
+    return (
+      <span className={`text-[9px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-md border ml-2 ${styles[mode]}`}>
+        {labels[mode]}
+      </span>
+    );
+  };
+
   return (
-    <section id="testimonials">
-      <div className="text-center mb-8">
-        <Heading>What our clients say</Heading>
+    <section id="testimonials" className="py-24 overflow-hidden bg-white">
+      <div className="text-center mb-16">
+        <Heading>Client Stories</Heading>
+        <p className="text-neutral-500 max-w-xl mx-auto mt-4">
+          Trusted by founders and companies globally to deliver exceptional 
+          digital experiences.
+        </p>
       </div>
 
-      {/* MOBILE & TABLET: Vertical layout */}
-      <div className="block lap:hidden space-y-6 px-6">
-        {testimonials.slice(0, 3).map((t, i) => (
-          <motion.div
-            key={i}
-            custom={i}
-            variants={cardVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            className="p-6 bg-[var(--color-white)] rounded-xl border border-[var(--color-neutral-300)] shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <p className="text-[var(--color-neutral-800)] text-base leading-relaxed">
-              “{t.text}”
-            </p>
-            <p className="mt-4 font-semibold text-[var(--color-neutral-900)] text-right">
-              — {t.name}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* LAPTOP & DESKTOP: Infinite scroll */}
-      <div className="hidden lap:block relative overflow-hidden w-full py-8">
-        {/* Fading edges for visual depth */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[var(--color-white)] to-transparent z-20"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[var(--color-white)] to-transparent z-20"></div>
+      <div className="relative overflow-hidden w-full py-4">
+        {/* Infinite scroll for all devices for a more premium feel, 
+            but using different layouts if needed. Let's stick to infinite for all but slower on mobile */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
 
         <motion.div
-          className="flex gap-8"
-          initial="hidden"
+          className="flex gap-8 px-8"
           animate={controls}
           onMouseEnter={() => controls.stop()}
           onMouseLeave={() =>
@@ -93,7 +89,7 @@ export default function Testimonials() {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 25,
                   ease: "linear",
                 },
               },
@@ -103,19 +99,31 @@ export default function Testimonials() {
           {testimonials.concat(testimonials).map((t, i) => (
             <motion.div
               key={i}
-              custom={i}
               variants={cardVariant}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              className="flex-shrink-0 max-w-md p-6 bg-[var(--color-white)] rounded-xl border border-[var(--color-neutral-300)] shadow-lg hover:shadow-xl transition-shadow duration-300"
+              viewport={{ once: true }}
+              className="flex-shrink-0 w-[350px] tab:w-[450px] p-8 bg-white rounded-[32px] border border-[var(--color-neutral-100)] shadow-sm hover:shadow-xl hover:border-violet-100 transition-all duration-500"
             >
-              <p className="text-[var(--color-neutral-800)] text-base leading-relaxed">
-                “{t.text}”
-              </p>
-              <p className="mt-4 font-semibold text-[var(--color-neutral-900)] text-right">
-                — {t.name}
-              </p>
+              <div className="flex flex-col h-full">
+                <p className="text-[var(--color-neutral-800)] text-lg leading-relaxed font-serif italic mb-8">
+                  “{t.text}”
+                </p>
+                <div className="mt-auto flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-neutral-100)] flex items-center justify-center font-bold text-[var(--color-dark)] text-xs">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-bold text-[var(--color-dark)] text-sm flex items-center">
+                        {t.name}
+                        <Badge mode={t.mode} />
+                      </p>
+                      <p className="text-xs text-neutral-400">Verified Client</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

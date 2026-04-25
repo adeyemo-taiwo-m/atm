@@ -13,6 +13,10 @@ import Header from "../ui/Header";
 import Booking from "../sections/booking/Booking";
 import DownloadSection from "../Documents/DownloadSection";
 import DarkModeProvider from "../contexts/DarkModeContext";
+import { ModeProvider } from "../contexts/ModeContext";
+import FilterBar from "../ui/FilterBar";
+import AvailabilityBadge from "../ui/AvailabilityBadge";
+import CursorGlow from "../ui/CursorGlow";
 
 export default function Home() {
   useEffect(() => {
@@ -43,18 +47,23 @@ export default function Home() {
   return (
     <>
       <DarkModeProvider>
-        <div className="px-4 relative  tab:px-8 lap:px-12 desk:px-20">
-          <Header />
-          <Hero />
-          {/* <About /> */}
-          <Skills />
-          <Projects />
-          <Process />
-          <Testimonials />
-          <Booking />
-          <DownloadSection />
-        </div>
-        <Contact />
+        <ModeProvider>
+          <CursorGlow />
+          <div className="px-4 relative tab:px-8 lap:px-12 desk:px-20">
+            <Header />
+            <Hero />
+            <FilterBar />
+            <About />
+            <Skills />
+            <Projects />
+            <Process />
+            <Testimonials />
+            <Booking />
+            <DownloadSection />
+          </div>
+          <Contact />
+          <AvailabilityBadge />
+        </ModeProvider>
       </DarkModeProvider>
     </>
   );
