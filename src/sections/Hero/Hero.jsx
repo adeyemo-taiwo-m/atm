@@ -6,27 +6,40 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen pt-32 pb-20 flex flex-col items-center justify-start overflow-hidden"
+      className="relative min-h-screen flex flex-col lap:items-center lap:justify-center pt-32 pb-12 lap:py-0 overflow-hidden"
     >
-      <div className="relative w-full max-w-[1400px] mx-auto px-4 tab:px-6 lap:px-8 flex flex-col items-center text-center z-10">
+      <div className="container mx-auto px-6 relative flex flex-col lap:items-center z-10">
         {/* Top Text Group */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative z-20 flex items-center justify-center gap-4 mb-8"
+          className="relative z-20 flex items-center justify-center gap-4 mb-4"
         >
-          <span className="font-stylish italic text-xl tab:text-4xl lap:text-5xl text-[var(--color-dark)] font-light">
+          <span className="font-stylish italic text-xl tab:text-2xl text-[var(--color-dark)] font-light">
             I&apos;m a
           </span>
         </motion.div>
 
-        {/* Massive Text */}
+        {/* Large Text Background - Relative on mobile, takes space */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative z-0 text-[14vw] tab:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center font-stylish"
+          animate={{ 
+            opacity: 1, 
+            scale: 1,
+            x: ["-10%", "10%"] 
+          }}
+          transition={{ 
+            opacity: { duration: 0.8, delay: 0.4 },
+            scale: { duration: 0.8, delay: 0.4 },
+            x: { 
+              duration: 8, 
+              repeat: Infinity, 
+              repeatType: "reverse", 
+              ease: "easeInOut" 
+            }
+          }}
+          className="relative z-0 text-[18vw] lap:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center font-stylish"
         >
           <span
             className="gradient-text"
@@ -42,17 +55,17 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* Central Image - Positioned to look like it's popping out */}
+        {/* Profile Image Box - Relative on mobile, Absolute on desktop */}
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute top-[12%] tab:top-[15%] lap:top-[10%] left-1/2 -translate-x-1/2 z-10 w-[280px] tab:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl flex items-end justify-center group"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="relative lap:absolute lap:top-[55%] lap:left-1/2 lap:-translate-x-1/2 lap:-translate-y-1/2 z-10 w-[280px] tab:w-[400px] lap:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden flex items-end justify-center group mt-8 lap:mt-0 mx-auto"
         >
           <img
             src="/profile.svg"
             alt="Taiwo Adeyemo"
-            className="w-[110%] max-w-none h-auto object-contain transition-all duration-700 group-hover:scale-110 drop-shadow-2xl translate-y-[10%]"
+            className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-110 drop-shadow-2xl"
           />
         </motion.div>
       </div>
