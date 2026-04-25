@@ -35,11 +35,11 @@ export default function DownloadSection() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col lap:flex-row  justify-center items-center gap-4">
+        <div className="flex flex-col lap:flex-row justify-center items-center gap-4 max-w-xl mx-auto w-full">
           {/* Primary Button for Download */}
           <Button
             variant="primary"
-            className="w-full lap:w-auto"
+            className="w-full"
             onClick={() => window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")}
           >
             <FaDownload /> Download my CV
@@ -48,7 +48,7 @@ export default function DownloadSection() {
           {/* Secondary Button for Call */}
           <Button
             variant="secondary"
-            className="w-full lap:w-auto"
+            className="w-full"
             onClick={() => (window.location.href = "tel:+2347012425718")}
           >
             <FaPhoneAlt /> Book a Call

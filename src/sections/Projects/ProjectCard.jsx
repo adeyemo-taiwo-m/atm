@@ -84,7 +84,7 @@ function ProjectCard({ project }) {
         <div className="flex flex-wrap gap-3 mt-auto">
           {project.mode === 'design' || project.mode === 'all' ? (
             <Button
-              variant={project.mode === 'design' ? "primary" : "secondarySmall"}
+              variant={project.mode === 'design' ? "primary" : "secondary"}
               className="flex-1 min-w-[120px]"
               onClick={() => project.designLink && window.open(project.designLink, "_blank")}
             >
@@ -104,7 +104,7 @@ function ProjectCard({ project }) {
           
           {project.mode === 'development' && (
             <Button
-              variant="secondarySmall"
+              variant="secondary"
               className="flex-1 min-w-[120px]"
               onClick={() => window.open(project.liveLink, "_blank")} // Placeholder for code link
             >

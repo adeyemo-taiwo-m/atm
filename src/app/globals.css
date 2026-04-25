@@ -188,7 +188,7 @@
   --color-red-light-active: #632e31;
 
   /* NEUTRALS */
-  --color-neutral-100: #1e1f22;
+  /* --color-neutral-100: #1e1f22;
   --color-neutral-200: #26272b;
   --color-neutral-300: #323337;
   --color-neutral-400: #46474c;
@@ -198,6 +198,19 @@
   --color-neutral-800: #b4b6ba;
   --color-neutral-900: #e1e2e5;
   --color-white: #000000;
+
+ */
+
+  --color-neutral-100: #0e1521;
+  --color-neutral-200: #131c2e;
+  --color-neutral-300: #19243d;
+  --color-neutral-400: #1e2d45;
+  --color-neutral-500: #253655;
+  --color-neutral-600: #2e4369;
+  --color-neutral-700: #3d5a8a;
+  --color-neutral-800: #7baee8;
+  --color-neutral-900: #c8d8f0;
+  --color-white: #0a0f1a;
 
   /* Light/Background (dark mode versions) */
   --color-light: #1f2a32;
@@ -253,19 +266,24 @@
 }
 
 body {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--color-white);
   color: var(--color-dark);
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .heading {
-  font-family: "Playfair Display", serif;
-  letter-spacing: -0.01em;
+h1,
+h2,
+h3,
+h4,
+.heading {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
-.font-serif {
-  font-family: "Playfair Display", serif;
+.font-stylish {
+  font-family: "Syne", sans-serif;
 }
 
 .cursor-glow {
@@ -273,7 +291,11 @@ h1, h2, h3, h4, .heading {
   position: fixed;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle at center, rgba(91, 60, 242, 0.05) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(91, 60, 242, 0.05) 0%,
+    transparent 70%
+  );
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;

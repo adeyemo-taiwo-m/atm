@@ -2,46 +2,44 @@ import React from "react";
 import clsx from "clsx";
 
 /**
- * StarBorder (Glow-only version, restored position)
- * Adds subtle glowing light animation along the edges — no border line.
+ * InternalFlow
+ * Adds a subtle flowing light animation INSIDE the element.
+ * If the element is white, the flow should be dark.
+ * If the element is dark, the flow should be light.
  */
 
-const StarBorder = ({
+const InternalFlow = ({
   as: Component = "div",
   className = "",
-  color = "#d1d1d1", // bright gray glow
-  speed = "5s",
-  thickness = 2,
+  color = "rgba(255,255,255,0.2)", // default light flow
+  speed = "8s",
   children,
   ...rest
 }) => {
   return (
     <Component
       className={clsx(
-        "relative inline-block overflow-hidden rounded-2xl group",
+        "relative inline-block overflow-hidden rounded-2xl group isolate",
         className
       )}
       {...rest}
     >
-      {/* ✨ Bottom Moving Glow (restored position) */}
+      {/* ✨ Internal Flow Layer */}
       <div
-        className="absolute bottom-[-12px] right-[-250%] w-[300%] h-[50%] opacity-70 rounded-full animate-star-movement-bottom pointer-events-none"
+        className="absolute inset-0 z-0 pointer-events-none opacity-30 group-hover:opacity-50 transition-opacity duration-500"
         style={{
-          background: `radial-gradient(circle, ${color}, transparent 20%)`,
-          animationDuration: speed,
-          filter: `drop-shadow(0 0 25px ${color})`,
+          background: `linear-gradient(45deg, transparent 25%, ${color} 50%, transparent 75%)`,
+          backgroundSize: '200% 200%',
+          animation: `flow ${speed} linear infinite`,
         }}
       />
-
-      {/* ✨ Top Moving Glow (restored position) */}
-      <div
-        className="absolute top-[-12px] left-[-250%] w-[300%] h-[50%] opacity-70 rounded-full animate-star-movement-top pointer-events-none"
-        style={{
-          background: `radial-gradient(circle, ${color}, transparent 20%)`,
-          animationDuration: speed,
-          filter: `drop-shadow(0 0 25px ${color})`,
-        }}
-      />
+      
+      <style jsx>{`
+        @keyframes flow {
+          0% { background-position: 200% 0%; }
+          100% { background-position: -200% 0%; }
+        }
+      `}</style>
 
       {/* 🟣 Content */}
       <div className="relative z-10">{children}</div>
@@ -49,4 +47,4 @@ const StarBorder = ({
   );
 };
 
-export default StarBorder;
+export default InternalFlow;

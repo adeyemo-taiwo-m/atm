@@ -106,7 +106,7 @@ export default function Testimonials() {
               className="flex-shrink-0 w-[350px] tab:w-[450px] p-8 bg-white rounded-[32px] border border-[var(--color-neutral-100)] shadow-sm hover:shadow-xl hover:border-violet-100 transition-all duration-500"
             >
               <div className="flex flex-col h-full">
-                <p className="text-[var(--color-neutral-800)] text-lg leading-relaxed font-serif italic mb-8">
+                <p className="text-[var(--color-neutral-800)] text-lg leading-relaxed font-stylish italic mb-8">
                   “{t.text}”
                 </p>
                 <div className="mt-auto flex items-center justify-between">

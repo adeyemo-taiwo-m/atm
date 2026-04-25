@@ -72,7 +72,7 @@ export default function About() {
             >
               <Heading className="mb-6">About Me</Heading>
               
-              <p className="text-2xl tab:text-3xl font-serif italic text-[var(--color-dark)] leading-tight mb-8">
+              <p className="text-2xl tab:text-3xl font-stylish italic text-[var(--color-dark)] leading-tight mb-8">
                 {activeContent.lead}
               </p>
 

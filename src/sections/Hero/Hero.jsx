@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="relative z-20 flex items-center justify-center gap-4 mb-8"
         >
-          <span className="font-serif italic text-2xl tab:text-6xl lap:text-7xl text-[var(--color-dark)] font-light">
+          <span className="font-stylish italic text-xl tab:text-4xl lap:text-5xl text-[var(--color-dark)] font-light">
             I&apos;m a
           </span>
         </motion.div>
@@ -86,7 +86,7 @@ export default function Hero() {
           className="hidden tab:block absolute left-4 lap:left-10 top-[40%] text-left"
         >
           <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4"></div>
-          <p className="text-xl tab:text-2xl font-serif italic text-[var(--color-dark)]">
+          <p className="text-xl tab:text-2xl font-stylish italic text-[var(--color-dark)]">
             Frontend
             <br />
             Developer
@@ -101,7 +101,7 @@ export default function Hero() {
           className="hidden tab:block absolute right-4 lap:right-10 top-[40%] text-right"
         >
           <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4 ml-auto"></div>
-          <p className="text-xl tab:text-2xl font-serif italic text-[var(--color-dark)]">
+          <p className="text-xl tab:text-2xl font-stylish italic text-[var(--color-dark)]">
             UI/UX
             <br />
             Designer
@@ -155,7 +155,7 @@ export default function Hero() {
           <div className="mt-10 flex justify-center w-full">
             <Button
               variant="primary"
-              className="w-full lap:w-auto"
+              className="w-full max-w-2xl"
               onClick={() =>
                 window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")
               }
@@ -168,13 +168,13 @@ export default function Hero() {
 
       {/* Floating Pills Cluster */}
       <div className="hidden lap:flex absolute bottom-10 left-0 w-full justify-center items-end gap-4 z-40 pointer-events-none opacity-0 tab:opacity-100">
-        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif italic transform -rotate-6">
+        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-stylish italic transform -rotate-6">
           Product Design
         </div>
         <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-bold mb-8">
           Website Development
         </div>
-        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-serif transform rotate-3">
+        <div className="bg-white px-6 py-2 rounded-full shadow-lg text-[var(--color-dark)] font-stylish transform rotate-3">
           Mobile Apps
         </div>
       </div>
