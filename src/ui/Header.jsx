@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaBehance } from "react-icons/fa";
 // eslint-disable-next-line
 import { motion, AnimatePresence } from "framer-motion";
 import useDarkMode from "../hooks/useDarkMode";
@@ -85,17 +85,34 @@ export default function Header() {
               )}
             </button>
 
-            {/* Chat Button */}
-            <Button
-              variant="whatsappLight"
-              className="hidden lap:flex items-center"
-              onClick={() =>
-                window.open("https://wa.me/2347012425718", "_blank")
-              }
-            >
-              <FaWhatsapp className="mr-2 text-green-500" />
-              Chat Me
-            </Button>
+            {/* Social Links & Chat */}
+            <div className="hidden lap:flex items-center gap-2">
+              <Button
+                variant="secondarySmall"
+                onClick={() =>
+                  window.open("https://github.com/adeyemo-taiwo-m", "_blank")
+                }
+              >
+                <FaGithub /> GitHub
+              </Button>
+              <Button
+                variant="secondarySmall"
+                onClick={() =>
+                  window.open("https://www.behance.net/atmdesigns_dev", "_blank")
+                }
+              >
+                <FaBehance /> Behance
+              </Button>
+              <Button
+                variant="whatsappLight"
+                className="!p-2"
+                onClick={() =>
+                  window.open("https://wa.me/2347012425718", "_blank")
+                }
+              >
+                <FaWhatsapp className="text-green-500 text-xl" />
+              </Button>
+            </div>
 
             {/* Mobile menu button */}
             <button
@@ -155,16 +172,38 @@ export default function Header() {
                   </a>
                 ))}
 
-                <Button
-                  variant="whatsappLight"
-                  className="items-center"
-                  onClick={() =>
-                    window.open("https://wa.me/2347012425718", "_blank")
-                  }
-                >
-                  <FaWhatsapp className="mr-2 text-green-500" />
-                  Chat Me
-                </Button>
+                <div className="pt-4 space-y-2">
+                  <Button
+                    variant="secondarySmall"
+                    className="w-full justify-start"
+                    onClick={() =>
+                      window.open("https://github.com/adeyemo-taiwo-m", "_blank")
+                    }
+                  >
+                    <FaGithub /> GitHub
+                  </Button>
+                  <Button
+                    variant="secondarySmall"
+                    className="w-full justify-start"
+                    onClick={() =>
+                      window.open(
+                        "https://www.behance.net/atmdesigns_dev",
+                        "_blank",
+                      )
+                    }
+                  >
+                    <FaBehance /> Behance
+                  </Button>
+                  <Button
+                    variant="whatsappLight"
+                    className="w-full justify-start"
+                    onClick={() =>
+                      window.open("https://wa.me/2347012425718", "_blank")
+                    }
+                  >
+                    <FaWhatsapp className="text-green-500" /> WhatsApp
+                  </Button>
+                </div>
               </div>
             </motion.div>
           )}
