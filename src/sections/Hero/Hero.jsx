@@ -47,18 +47,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute top-[10%] tab:top-[12%] lap:top-[8%] left-1/2 -translate-x-1/2 z-10 w-[200px] tab:w-[400px]  h-auto pointer-events-none"
+          className="absolute top-[12%] tab:top-[15%] lap:top-[10%] left-1/2 -translate-x-1/2 z-10 w-[280px] tab:w-[480px] aspect-[4/5] rounded-[40px] tab:rounded-[60px] border border-white/20 bg-white/5 backdrop-blur-md shadow-2xl flex items-end justify-center group"
         >
           <img
             src="/profile.svg"
             alt="Taiwo Adeyemo"
-            className="w-full h-full object-cover object-top drop-shadow-2xl opacity-100 hover:grayscale-0 transition-all duration-500 mask-image-b-transparent"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, black 90%, transparent 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, black 90%, transparent 100%)",
-            }}
+            className="w-[110%] max-w-none h-auto object-contain transition-all duration-700 group-hover:scale-110 drop-shadow-2xl translate-y-[10%]"
           />
         </motion.div>
       </div>

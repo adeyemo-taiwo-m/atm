@@ -174,33 +174,38 @@
   --color-red-light-hover: #59282b;
   --color-red-light-active: #632e31;
 
-  /* NEUTRALS — blue-tinted dark scale (darkest → lightest) */
+  /* NEUTRALS — blue-tinted dark scale
+     100–400 = backgrounds/surfaces (dark)
+     500–600 = borders & dividers
+     700     = MUTED TEXT — must be bright enough to read on dark bg
+     800     = SECONDARY TEXT — labels, captions, placeholders
+     900     = PRIMARY TEXT — headings, body copy                    */
   --color-neutral-100: #0e1521;
   --color-neutral-200: #131c2e;
   --color-neutral-300: #19243d;
   --color-neutral-400: #1e2d45;
   --color-neutral-500: #253655;
   --color-neutral-600: #2e4369;
-  --color-neutral-700: #3d5a8a;
-  --color-neutral-800: #7baee8;
-  --color-neutral-900: #c8d8f0;
+  --color-neutral-700: #6b8fc7; /* muted text — readable on dark bg  */
+  --color-neutral-800: #a8c4e8; /* secondary text — labels, captions  */
+  --color-neutral-900: #e2ecf8; /* primary text — headings, body      */
 
   /* Surfaces & backgrounds */
   --color-white: #131c2e;
   --color-white-hover: #19243d;
 
-  /* Text */
-  --color-dark: #c8d8f0;
-  --color-dark-hover: #dde8f8;
-  --color-dark-active: #eef3fc;
+  /* Text — main semantic tokens */
+  --color-dark: #e2ecf8; /* primary body text                  */
+  --color-dark-hover: #eef4fc;
+  --color-dark-active: #f6f9fe;
 
-  --color-black: #e8f0fc;
-  --color-black-hover: #f0f5ff;
+  --color-black: #f0f5ff; /* strongest text / pure white feel   */
+  --color-black-hover: #f8faff;
 
   /* BRAND NEUTRAL TONES */
   --color-content-bg: #0e1521;
   --color-border: #253655;
-  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-shadow: rgba(0, 0, 0, 0.45);
 
   /* Light / tinted surfaces */
   --color-light: #1e2d45;
@@ -321,9 +326,9 @@ h4,
 }
 
 .dark {
-  --gradient-brand: linear-gradient(90deg, #7866ff 0%, #4d8aff 100%);
-  --gradient-accent: linear-gradient(90deg, #4d8aff 0%, #67c9ff 100%);
-  --gradient-neutral: linear-gradient(90deg, #7baee8 0%, #c8d8f0 100%);
+  --gradient-brand: linear-gradient(90deg, #9b8bff 0%, #6aa8ff 100%);
+  --gradient-accent: linear-gradient(90deg, #6aa8ff 0%, #7cd4ff 100%);
+  --gradient-neutral: linear-gradient(90deg, #a8c4e8 0%, #e2ecf8 100%);
 }
 
 /* Gradient text utility */
@@ -360,4 +365,59 @@ h4,
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+/* ===================================================== */
+/* 🔆 DARK MODE TEXT CONTRAST FIXES                      */
+/* Small labels, captions, muted text MUST be readable   */
+/* ===================================================== */
+
+/* Any element using Tailwind's text-neutral-700 or     */
+/* color: var(--color-neutral-700) in dark mode gets    */
+/* the readable #6b8fc7 value automatically via the     */
+/* .dark override above. These utility classes below    */
+/* handle common Tailwind opacity/muted patterns that   */
+/* don't use CSS vars directly.                         */
+
+.dark .text-muted,
+.dark [class*="text-neutral-600"],
+.dark [class*="text-neutral-700"],
+.dark [class*="text-gray-500"],
+.dark [class*="text-gray-600"],
+.dark [class*="opacity-50"],
+.dark [class*="opacity-60"] {
+  color: var(--color-neutral-800) !important;
+  opacity: 1 !important;
+}
+
+/* Section sub-labels (e.g. "DESIGN TOOLS", "CORE FRONTEND") */
+.dark .section-label,
+.dark [class*="tracking-widest"],
+.dark [class*="uppercase"][class*="text-xs"],
+.dark [class*="uppercase"][class*="text-sm"] {
+  color: var(--color-neutral-800) !important;
+}
+
+/* Skill pill text, tag text, badge text in dark mode */
+.dark .skill-pill,
+.dark .tag-pill,
+.dark [class*="rounded-full"][class*="text-xs"],
+.dark [class*="rounded-full"][class*="text-sm"] {
+  color: var(--color-neutral-900) !important;
+}
+
+/* Body / description text under headings */
+.dark p,
+.dark [class*="text-base"],
+.dark [class*="text-sm"]:not([class*="uppercase"]) {
+  color: var(--color-neutral-900);
+}
+
+/* Headings stay at full brightness */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark .heading {
+  color: var(--color-neutral-900);
 }

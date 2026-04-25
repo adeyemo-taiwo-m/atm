@@ -58,12 +58,12 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Content */}
-      <div className="p-8 flex flex-col flex-1">
+      <div className="p-6 tab:p-8 flex flex-col flex-1">
         <div className="flex-1">
-          <h3 className="text-2xl text-[var(--color-dark)] font-stylish font-bold mb-3 group-hover:text-violet-600 transition-colors">
+          <h3 className="text-xl tab:text-2xl text-[var(--color-dark)] font-stylish font-bold mb-3 group-hover:text-violet-600 transition-colors">
             {project.title}
           </h3>
-          <p className="text-neutral-500 leading-relaxed mb-6 line-clamp-2">
+          <p className="text-neutral-500 leading-relaxed mb-6">
             {project.description}
           </p>
 
