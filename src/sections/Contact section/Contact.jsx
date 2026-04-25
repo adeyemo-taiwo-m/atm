@@ -17,10 +17,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className={`flex justify-center bg-black items-center rounded-t-3xl py-12 px-6 tab:px-12 lap:px-24 overflow-hidden relative`}
+      className={`flex justify-center bg-[var(--color-neutral-900)] items-center rounded-t-[50px] py-24 px-6 tab:px-12 lap:px-24 overflow-hidden relative`}
     >
-      {/* Optional overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/20 rounded-t-3xl pointer-events-none"></div>
+      {/* Optional decorative gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-blue-500/20 pointer-events-none"></div>
 
       <motion.div
         variants={slideUpVariant}

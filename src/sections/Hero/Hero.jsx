@@ -1,28 +1,13 @@
 import React from "react";
 // eslint-disable-next-line
 import { motion } from "framer-motion";
-import Button from "../../ui/Button";
-import Heading from "../../ui/Heading";
-import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
-  function scrollToSection(id) {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }
-
   return (
     <section
       id="hero"
       className="relative w-full min-h-screen pt-32 pb-20 flex flex-col items-center justify-start overflow-hidden"
     >
-      {/* Background/Decoration if needed - kept clean for now */}
-
       <div className="relative w-full max-w-[1400px] mx-auto px-4 tab:px-6 lap:px-8 flex flex-col items-center text-center z-10">
         {/* Top Text Group */}
         <motion.div
@@ -41,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative z-0 text-[14vw] tab:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center"
+          className="relative z-0 text-[14vw] tab:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center font-stylish"
         >
           <span
             className="gradient-text"
@@ -76,94 +61,6 @@ export default function Hero() {
             }}
           />
         </motion.div>
-
-        {/* Floating Context Pills/Text - Adjusted positioning logic if needed, but absolute works relative to container */}
-        {/* Left Side Info */}
-        {/* <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1 }}
-          className="hidden tab:block absolute left-4 lap:left-10 top-[40%] text-left"
-        >
-          <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4"></div>
-          <p className="text-xl tab:text-2xl font-stylish italic text-[var(--color-dark)]">
-            Frontend
-            <br />
-            Developer
-          </p>
-        </motion.div>
-
-        {/* Right Side Info */}
-        {/* <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.1 }}
-          className="hidden tab:block absolute right-4 lap:right-10 top-[40%] text-right"
-        >
-          <div className="h-[2px] w-12 bg-[var(--color-dark)] mb-4 ml-auto"></div>
-          <p className="text-xl tab:text-2xl font-stylish italic text-[var(--color-dark)]">
-            UI/UX
-            <br />
-            Designer
-          </p>
-        </motion.div> */}
-
-        {/* Bottom Area - Gradient Shape */}
-        {/* About Content Box */}
-        <div
-          id="about"
-          className="relative w-full z-20 rounded-t-[50px] tab:rounded-t-[80px] px-6 py-16 tab:py-24 mt-48 tab:mt-60 bg-[var(--color-neutral-100)]"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <Heading className="mb-4">About Me</Heading>
-
-            <p className="text-[var(--color-neutral-600)] leading-relaxed text-xl tab:text-xl mb-6">
-              Hi! I’m Taiwo, a Frontend Developer & UI/UX Designer. I create{" "}
-              <strong className="text-[var(--color-dark)]">
-                clean, responsive, and intuitive web experiences
-              </strong>{" "}
-              that help businesses engage users and grow.
-            </p>
-
-            <p className="text-[var(--color-neutral-600)] leading-relaxed text-xl tab:text-xl mb-12">
-              I specialize in turning ideas into{" "}
-              <strong className="text-[var(--color-dark)]">
-                beautiful, high-performing digital products
-              </strong>{" "}
-              — from thoughtful UI/UX design to fast, modern web development.
-            </p>
-
-            <div className="grid grid-cols-1 tab:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
-              <div className="bg-[var(--color-white)] p-6 rounded-2xl border border-[var(--color-border)] shadow-sm hover:shadow-md transition-all">
-                <strong className="block text-[var(--color-dark)] text-xl mb-2">
-                  Focus
-                </strong>
-                <p className="text-[var(--color-neutral-600)]">
-                  Frontend Development & UI Design
-                </p>
-              </div>
-              <div className="bg-[var(--color-white)] p-6 rounded-2xl border border-[var(--color-border)] shadow-sm hover:shadow-md transition-all">
-                <strong className="block text-[var(--color-dark)] text-xl mb-2">
-                  Goal
-                </strong>
-                <p className="text-[var(--color-neutral-600)]">
-                  Build impactful digital products for businesses
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 flex justify-center w-full">
-            <Button
-              variant="primary"
-              className="w-full max-w-2xl"
-              onClick={() =>
-                window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")
-              }
-            >
-              <FaDownload /> Download My Resume
-            </Button>
-          </div>
-        </div>
       </div>
 
       {/* Floating Pills Cluster */}
@@ -181,4 +78,3 @@ export default function Hero() {
     </section>
   );
 }
-

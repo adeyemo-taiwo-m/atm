@@ -25,7 +25,7 @@ export default function DownloadSection() {
       >
         {/* Text Section */}
         <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-bold text-neutral-900 tab:text-3xl">
+          <h2 className="text-2xl font-bold text-neutral-900 tab:text-3xl font-stylish">
             Download my CV
           </h2>
           <p className="mt-2 text-neutral-700 text-base tab:text-lg leading-relaxed">

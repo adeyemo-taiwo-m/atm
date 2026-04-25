@@ -11,12 +11,12 @@
   /* 🎨 COLOR SYSTEM */
   /* ===================================================== */
 
-  /* Gradient Start (Purple-Blue) */
+  /* Primary (Purple-Blue) */
   --color-primary: #5b3cf2;
   --color-primary-hover: #4a39e0;
   --color-primary-active: #3a31cc;
 
-  /* Divider (Black) */
+  /* Divider */
   --color-divider: #000000;
 
   /* Medium Blue */
@@ -28,11 +28,6 @@
   --color-accent: #4db7ff;
   --color-accent-hover: #45a4e6;
   --color-accent-active: #3a8fc9;
-
-  /* Light Cyan */
-  --color-light: #c8f2ff;
-  --color-light-hover: #b3e8ff;
-  --color-light-active: #9edfff;
 
   /* SUCCESS (Green) */
   --color-success: #17b890;
@@ -61,48 +56,44 @@
   --color-red-light-hover: #ffc9cd;
   --color-red-light-active: #ffb3b8;
 
-  /* NEUTRALS */
-  --color-neutral-100: #f6f6f6;
-  --color-neutral-200: #eaeaea;
-  --color-neutral-300: #d2d3d3;
-  --color-neutral-400: #b1b2b2;
-  --color-neutral-500: #8e9090;
-  --color-neutral-600: #797a7b;
-  --color-neutral-700: #57595a;
-  --color-neutral-800: #363939;
-  --color-neutral-900: #1f2223;
+  /* NEUTRALS — light mode (warm white, not pure gray) */
+  --color-neutral-100: #f7f8fc;
+  --color-neutral-200: #eef0f8;
+  --color-neutral-300: #dde1f0;
+  --color-neutral-400: #c4c9de;
+  --color-neutral-500: #a2a8c4;
+  --color-neutral-600: #7c82a8;
+  --color-neutral-700: #555b8a;
+  --color-neutral-800: #2e3470;
+  --color-neutral-900: #0f1340;
   --color-white: #ffffff;
-
-  /* Neutral Gradient (Gray → Charcoal) */
-  /* --gradient-neutral: linear-gradient(90deg, #b1b2b2 0%, #363939 100%); */
 
   /* LIGHTS & BACKGROUND */
-  --color-light: #e5f6fb;
-  --color-light-hover: #d7e2ee;
-  --color-light-active: #b2c8de;
+  --color-light: #eef3fd;
+  --color-light-hover: #dce7fb;
+  --color-light-active: #c4d4f5;
 
-  --color-white: #ffffff;
-  --color-white-hover: #f3f6fa;
+  --color-white-hover: #f3f6fb;
 
   /* DARKS & TEXT */
-  --color-dark: #0f1e33;
-  --color-dark-hover: #0b182a;
-  --color-dark-active: #080f1f;
+  --color-dark: #0f1340;
+  --color-dark-hover: #0b0f33;
+  --color-dark-active: #080b26;
 
   --color-black: #000000;
   --color-black-hover: #0b0b0b;
 
   /* BRAND NEUTRAL TONES */
-  --color-content-bg: #f8f8f8;
-  --color-border: #e0e0e0;
-  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-content-bg: #f7f8fc;
+  --color-border: #dde1f0;
+  --color-shadow: rgba(91, 60, 242, 0.08);
 
   /* GOLD / HIGHLIGHT */
   --color-gold: #ffe393;
   --color-gold-hover: #ffd970;
   --color-gold-active: #ffc94c;
 
-  /* anination */
+  /* Animations */
   --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
   --animate-star-movement-top: star-movement-top linear infinite alternate;
 
@@ -129,21 +120,22 @@
   }
 }
 
-/* Dark */
+/* ===================================================== */
+/* 🌙 DARK MODE */
+/* ===================================================== */
 .dark {
-  /* Breakpoints remain the same */
   --breakpoint-mob: initial;
   --breakpoint-tab: 40rem;
   --breakpoint-lap: 64rem;
   --breakpoint-desk: 80rem;
 
-  /* Primary (Purple-Blue) — Darker, deeper tones */
+  /* Primary (Purple-Blue) — brighter in dark */
   --color-primary: #7866ff;
   --color-primary-hover: #6a59f3;
   --color-primary-active: #5c4bdd;
 
   /* Divider */
-  --color-divider: #ffffff1a;
+  --color-divider: rgba(255, 255, 255, 0.1);
 
   /* Secondary (Blue) */
   --color-secondary: #4d8aff;
@@ -155,12 +147,7 @@
   --color-accent-hover: #56b4eb;
   --color-accent-active: #4699cb;
 
-  /* Light Cyan → Soft blue highlights */
-  --color-light: #2a3f4a;
-  --color-light-hover: #314954;
-  --color-light-active: #395462;
-
-  /* SUCCESS (Green) */
+  /* SUCCESS */
   --color-success: #1ad1a5;
   --color-success-hover: #16b38e;
   --color-success-active: #129778;
@@ -169,7 +156,7 @@
   --color-green-light-hover: #24433d;
   --color-green-light-active: #2c4e48;
 
-  /* WARNING (Yellow / Orange) */
+  /* WARNING */
   --color-warning: #ffb545;
   --color-warning-hover: #e79f34;
   --color-warning-active: #c98b2c;
@@ -178,7 +165,7 @@
   --color-yellow-light-hover: #554528;
   --color-yellow-light-active: #665331;
 
-  /* ERROR (Red) */
+  /* ERROR */
   --color-error: #ff5a67;
   --color-error-hover: #e84855;
   --color-error-active: #cc3945;
@@ -187,20 +174,7 @@
   --color-red-light-hover: #59282b;
   --color-red-light-active: #632e31;
 
-  /* NEUTRALS */
-  /* --color-neutral-100: #1e1f22;
-  --color-neutral-200: #26272b;
-  --color-neutral-300: #323337;
-  --color-neutral-400: #46474c;
-  --color-neutral-500: #5b5d62;
-  --color-neutral-600: #707276;
-  --color-neutral-700: #8b8d91;
-  --color-neutral-800: #b4b6ba;
-  --color-neutral-900: #e1e2e5;
-  --color-white: #000000;
-
- */
-
+  /* NEUTRALS — blue-tinted dark scale (darkest → lightest) */
   --color-neutral-100: #0e1521;
   --color-neutral-200: #131c2e;
   --color-neutral-300: #19243d;
@@ -210,39 +184,40 @@
   --color-neutral-700: #3d5a8a;
   --color-neutral-800: #7baee8;
   --color-neutral-900: #c8d8f0;
-  --color-white: #0a0f1a;
 
-  /* Light/Background (dark mode versions) */
-  --color-light: #1f2a32;
-  --color-light-hover: #243039;
-  --color-light-active: #2a3842;
+  /* Surfaces & backgrounds */
+  --color-white: #131c2e;
+  --color-white-hover: #19243d;
 
-  --color-white: #1b1c1f;
-  --color-white-hover: #222327;
+  /* Text */
+  --color-dark: #c8d8f0;
+  --color-dark-hover: #dde8f8;
+  --color-dark-active: #eef3fc;
 
-  /* Dark & Text */
-  --color-dark: #e8edf7;
-  --color-dark-hover: #d4dae7;
-  --color-dark-active: #c1c8d7;
-
-  --color-black: #ffffff;
-  --color-black-hover: #f0f0f0;
+  --color-black: #e8f0fc;
+  --color-black-hover: #f0f5ff;
 
   /* BRAND NEUTRAL TONES */
-  --color-content-bg: #121417;
-  --color-border: #2b2d31;
+  --color-content-bg: #0e1521;
+  --color-border: #253655;
   --color-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Light / tinted surfaces */
+  --color-light: #1e2d45;
+  --color-light-hover: #253655;
+  --color-light-active: #2e4369;
 
   /* Gold */
   --color-gold: #f6d17a;
   --color-gold-hover: #e5c06a;
   --color-gold-active: #d1aa55;
 
-  /* Animations stay unchanged */
+  /* Animations unchanged */
   --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
   --animate-star-movement-top: star-movement-top linear infinite alternate;
 }
-/* Keyframes remain the same */
+
+/* Keyframes (outside .dark so they always register) */
 @keyframes star-movement-bottom {
   0% {
     transform: translate(0%, 0%);
@@ -265,6 +240,9 @@
   }
 }
 
+/* ===================================================== */
+/* 🖋  BASE STYLES */
+/* ===================================================== */
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--color-white);
@@ -286,6 +264,9 @@ h4,
   font-family: "Syne", sans-serif;
 }
 
+/* ===================================================== */
+/* ✨ CURSOR GLOW */
+/* ===================================================== */
 .cursor-glow {
   pointer-events: none;
   position: fixed;
@@ -293,7 +274,7 @@ h4,
   height: 800px;
   background: radial-gradient(
     circle at center,
-    rgba(91, 60, 242, 0.05) 0%,
+    rgba(91, 60, 242, 0.06) 0%,
     transparent 70%
   );
   z-index: 9999;
@@ -301,6 +282,18 @@ h4,
   transition: opacity 0.3s ease;
 }
 
+/* Dark mode cursor glow — brighter purple */
+.dark .cursor-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(120, 102, 255, 0.09) 0%,
+    transparent 70%
+  );
+}
+
+/* ===================================================== */
+/* 🌊 BEAMS / RAYS */
+/* ===================================================== */
 .beams-container {
   position: relative;
   width: 100%;
@@ -315,19 +308,56 @@ h4,
   );
 }
 
+/* ===================================================== */
+/* 🎨 GRADIENT HELPERS */
+/* ===================================================== */
 :root {
-  /* NEUTRAL GRADIENT (moved to :root so it exists at runtime) */
-  --gradient-neutral: linear-gradient(90deg, #b1b2b2 0%, #363939 100%);
+  /* Purple → Blue brand gradient */
+  --gradient-brand: linear-gradient(90deg, #5b3cf2 0%, #347cff 100%);
+  /* Blue → Cyan accent gradient */
+  --gradient-accent: linear-gradient(90deg, #347cff 0%, #4db7ff 100%);
+  /* Neutral text gradient (light mode) */
+  --gradient-neutral: linear-gradient(90deg, #555b8a 0%, #0f1340 100%);
 }
 
-/* Gradient text helper */
+.dark {
+  --gradient-brand: linear-gradient(90deg, #7866ff 0%, #4d8aff 100%);
+  --gradient-accent: linear-gradient(90deg, #4d8aff 0%, #67c9ff 100%);
+  --gradient-neutral: linear-gradient(90deg, #7baee8 0%, #c8d8f0 100%);
+}
+
+/* Gradient text utility */
 .gradient-text {
-  display: inline-block; /* prevents some clipping issues */
+  display: inline-block;
   background-image: var(--gradient-neutral);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  -webkit-background-clip: text; /* Chrome / Safari */
-  background-clip: text; /* Firefox (behind a flag older) */
-  -webkit-text-fill-color: transparent; /* make text transparent for webkit */
-  color: transparent; /* fallback */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Brand gradient text — purple to blue */
+.gradient-text-brand {
+  display: inline-block;
+  background-image: var(--gradient-brand);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Accent gradient text — blue to cyan */
+.gradient-text-accent {
+  display: inline-block;
+  background-image: var(--gradient-accent);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }

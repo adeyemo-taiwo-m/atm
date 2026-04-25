@@ -1,6 +1,6 @@
 import SplitText from "../../ui/SplitText";
 
-function HeroText({ children, className, duration = 0.1 }) {
+function HeroText({ children, className, duration = 0.1, tag = "p" }) {
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
@@ -20,6 +20,7 @@ function HeroText({ children, className, duration = 0.1 }) {
         rootMargin="-100px"
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
+        tag={tag}
       />
     </>
   );

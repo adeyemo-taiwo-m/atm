@@ -67,7 +67,7 @@ export default function Process() {
                       0{idx + 1}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-[var(--color-dark)] mb-3">{step.title}</h3>
+                  <h3 className="text-lg font-stylish font-bold text-[var(--color-dark)] mb-3">{step.title}</h3>
                   <p className="text-sm text-neutral-500 leading-relaxed">{step.description}</p>
                 </motion.div>
               ))}
