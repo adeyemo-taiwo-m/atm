@@ -1,6 +1,6 @@
 # 🌐 Portfolio - Adeyemo Taiwo M.
 
-![Banner](public/nexcity-landing.png)
+![Banner](public/kanour.png)
 
 Welcome to the official repository of my personal portfolio. I am **Adeyemo Taiwo M.**, a **Frontend Developer & UI Designer** dedicated to building functional, user-friendly, and visually stunning web experiences that solve real-world business problems.
 
