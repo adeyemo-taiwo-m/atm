@@ -38,6 +38,17 @@ function ProjectCard({ project }) {
       className="group relative rounded-[32px] overflow-hidden bg-white border border-[var(--color-neutral-200)] shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
       style={{ perspective: "1000px" }}
     >
+      {/* Status Badge */}
+      {project.isBuilding && (
+        <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 border border-blue-200 text-[10px] font-bold uppercase tracking-wider shadow-sm">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          In Development
+        </div>
+      )}
+
       {/* Role Badge */}
       <div className={`absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-sm ${badgeColors[project.mode]}`}>
         {project.mode === 'all' ? 'Design + Dev' : project.mode}
@@ -92,7 +103,7 @@ function ProjectCard({ project }) {
             </Button>
           ) : null}
 
-          {project.mode === 'development' || project.mode === 'all' ? (
+          {(project.mode === 'development' || project.mode === 'all') && !project.isBuilding && (
             <Button
               variant="primary"
               className="flex-1 min-w-[120px]"
@@ -100,9 +111,9 @@ function ProjectCard({ project }) {
             >
               View Live
             </Button>
-          ) : null}
+          )}
           
-          {project.mode === 'development' && (
+          {project.mode === 'development' && !project.isBuilding && (
             <Button
               variant="secondary"
               className="flex-1 min-w-[120px]"

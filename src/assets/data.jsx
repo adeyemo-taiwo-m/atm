@@ -112,12 +112,14 @@ export const projectsData = [
     title: "CampusKobo - Student Finance App",
     description:
       "A personal finance app that helps university students track expenses, manage budgets and hit savings goals in under 5 seconds a day.",
-    role: "UI/UX Design",
-    techStack: ["Figma", "UI/UX Design", "Responsive Design"],
+    role: "UI/UX Design & Development",
+    techStack: ["Figma", "React Native", "Firebase"],
     image: "/campus-kobo.png.png",
+    liveLink: "",
     designLink:
       "https://www.behance.net/gallery/247651931/CampusKobo-Mobile-App",
-    mode: "design",
+    mode: "all",
+    isBuilding: true,
     impact: "Simplified financial tracking for university students.",
   },
   {
