@@ -90,7 +90,7 @@ export const projectsData = [
       "Responsive Design",
     ],
     image: "/delite02-logistics.svg",
-    liveLink: "https://www.delite02-logistics.com",
+    liveLink: "https://www.delite02-logistics.com.ng",
     designLink: "",
     mode: "development",
     impact: "Real-time logistics tracking across Nigeria.",
@@ -105,7 +105,7 @@ export const projectsData = [
     liveLink: "https://nextcity-realestate.onrender.com",
     designLink:
       "https://www.behance.net/gallery/238470147/NexCity-Landing-Page",
-    mode: "design",
+    mode: "all",
     impact: "Reduced bounce rate for real estate listings.",
   },
   {

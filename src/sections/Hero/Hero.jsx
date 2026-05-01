@@ -24,20 +24,20 @@ export default function Hero() {
         {/* Large Text Background - Relative on mobile, takes space */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ 
-            opacity: 1, 
+          animate={{
+            opacity: 1,
             scale: 1,
-            x: ["-10%", "10%"] 
+            x: ["-10%", "10%"],
           }}
-          transition={{ 
+          transition={{
             opacity: { duration: 0.8, delay: 0.4 },
             scale: { duration: 0.8, delay: 0.4 },
-            x: { 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse", 
-              ease: "easeInOut" 
-            }
+            x: {
+              duration: 8,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            },
           }}
           className="relative z-0 text-[18vw] lap:text-[18vw] leading-[0.8] font-black tracking-tighter flex flex-col items-center font-stylish"
         >

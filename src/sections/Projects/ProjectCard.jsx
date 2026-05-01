@@ -25,7 +25,7 @@ function ProjectCard({ project }) {
   const badgeColors = {
     design: "bg-violet-100 text-violet-700 border-violet-200",
     development: "bg-blue-100 text-blue-700 border-blue-200",
-    all: "bg-gradient-to-r from-violet-100 to-blue-100 text-violet-800 border-violet-200"
+    all: "bg-gradient-to-r from-violet-100 to-blue-100 text-violet-800 border-violet-200",
   };
 
   return (
@@ -40,18 +40,20 @@ function ProjectCard({ project }) {
     >
       {/* Status Badge */}
       {project.isBuilding && (
-        <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 border border-blue-200 text-[10px] font-bold uppercase tracking-wider shadow-sm">
+        <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-700 border border-amber-200 text-[10px] font-bold uppercase tracking-wider shadow-sm">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
           </span>
-          In Development
+          Building Process
         </div>
       )}
 
       {/* Role Badge */}
-      <div className={`absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-sm ${badgeColors[project.mode]}`}>
-        {project.mode === 'all' ? 'Design + Dev' : project.mode}
+      <div
+        className={`absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-sm ${badgeColors[project.mode]}`}
+      >
+        {project.mode === "all" ? "Design + Dev" : project.mode}
       </div>
 
       {/* Image & Overlay */}
@@ -93,27 +95,32 @@ function ProjectCard({ project }) {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-3 mt-auto">
-          {project.mode === 'design' || project.mode === 'all' ? (
+          {project.mode === "design" || project.mode === "all" ? (
             <Button
-              variant={project.mode === 'design' ? "primary" : "secondary"}
+              variant={project.mode === "design" ? "primary" : "secondary"}
               className="flex-1 min-w-[120px]"
-              onClick={() => project.designLink && window.open(project.designLink, "_blank")}
+              onClick={() =>
+                project.designLink && window.open(project.designLink, "_blank")
+              }
             >
               View Design
             </Button>
           ) : null}
 
-          {(project.mode === 'development' || project.mode === 'all') && !project.isBuilding && (
-            <Button
-              variant="primary"
-              className="flex-1 min-w-[120px]"
-              onClick={() => project.liveLink && window.open(project.liveLink, "_blank")}
-            >
-              View Live
-            </Button>
-          )}
-          
-          {project.mode === 'development' && !project.isBuilding && (
+          {(project.mode === "development" || project.mode === "all") &&
+            !project.isBuilding && (
+              <Button
+                variant="primary"
+                className="flex-1 min-w-[120px]"
+                onClick={() =>
+                  project.liveLink && window.open(project.liveLink, "_blank")
+                }
+              >
+                View Live
+              </Button>
+            )}
+
+          {project.mode === "development" && !project.isBuilding && (
             <Button
               variant="secondary"
               className="flex-1 min-w-[120px]"
