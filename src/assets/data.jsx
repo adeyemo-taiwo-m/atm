@@ -19,9 +19,23 @@ import {
   SiFramer,
   SiSupabase,
   SiNextdotjs,
+  SiTypescript,
 } from "react-icons/si";
 
 export const projectsData = [
+  {
+    title: "Fleer - Fleet Intelligence",
+    description:
+      "Real-time fleet intelligence platform that detects fuel theft, route deviations & idle abuse — and shows exactly how much it's costing you.",
+    role: "UI/UX Design & Frontend Development",
+    techStack: ["Next.js", "React", "Tailwind CSS", "PWA"],
+    image: "/fleer.png",
+    liveLink: "https://fleer.vercel.app",
+    githubLink: "https://github.com/adeyemo-taiwo-m/Fleer.git",
+    designLink: "",
+    mode: "development",
+    impact: "Maximizing fleet efficiency and reducing operational costs through real-time monitoring.",
+  },
   {
     title: "NexCity Realty",
     description:
@@ -55,6 +69,7 @@ export const projectsData = [
     techStack: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
     image: "/weather.jpg",
     liveLink: "https://weather-app-fm30-eta.vercel.app/",
+    githubLink: "https://github.com/adeyemo-taiwo-m/weather-app-fm30-hackaton.git",
     designLink: "",
     mode: "development",
     impact: "Real-time weather data integration with seamless UX.",
@@ -73,6 +88,7 @@ export const projectsData = [
     ],
     image: "/kanour.png",
     liveLink: "https://kanour.com",
+    githubLink: "https://github.com/adeyemo-taiwo-m/kanour-digital-service.git",
     designLink: "",
     mode: "development",
     impact: "High-performance enterprise solution for fintech automation.",
@@ -91,6 +107,7 @@ export const projectsData = [
     ],
     image: "/delite02-logistics.svg",
     liveLink: "https://www.delite02-logistics.com.ng",
+    githubLink: "https://github.com/adeyemo-taiwo-m/delite02-logistics.git",
     designLink: "",
     mode: "development",
     impact: "Real-time logistics tracking across Nigeria.",
@@ -245,6 +262,7 @@ export const skillGroups = [
       { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
       { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
       { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+      { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
     ],
   },
   {

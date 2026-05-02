@@ -124,7 +124,7 @@ function ProjectCard({ project }) {
             <Button
               variant="secondary"
               className="flex-1 min-w-[120px]"
-              onClick={() => window.open(project.liveLink, "_blank")} // Placeholder for code link
+              onClick={() => project.githubLink && window.open(project.githubLink, "_blank")}
             >
               View Code
             </Button>
