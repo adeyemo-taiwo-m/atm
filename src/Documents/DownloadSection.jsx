@@ -21,14 +21,14 @@ export default function DownloadSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }}
-        className="w-full max-w-6xl mx-auto bg-white border border-neutral-200 rounded-3xl shadow-md p-8  items-center text-center  space-y-6  tab:justify-between md:text-left tab:p-12 transition-all duration-300 hover:shadow-lg"
+        className="w-full max-w-6xl mx-auto bg-[var(--color-white)] border border-[var(--color-neutral-200)] rounded-3xl shadow-md p-8 items-center text-center space-y-6 tab:justify-between md:text-left tab:p-12 transition-all duration-300 hover:shadow-lg"
       >
         {/* Text Section */}
         <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-bold text-neutral-900 tab:text-3xl font-stylish">
+          <h2 className="text-2xl font-bold text-[var(--color-dark)] tab:text-3xl font-stylish">
             Download my CV
           </h2>
-          <p className="mt-2 text-neutral-700 text-base tab:text-lg leading-relaxed">
+          <p className="mt-2 text-[var(--color-neutral-600)] text-base tab:text-lg leading-relaxed">
             Grab a copy of my latest resume. The file includes my experience,
             projects, and skills.
           </p>

@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-6 tab:px-12 lap:px-24 overflow-hidden bg-[var(--color-neutral-50)]"
+      className="py-24 px-6 tab:px-12 lap:px-24 overflow-hidden bg-[var(--color-neutral-100)]"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

@@ -20,7 +20,7 @@ export default function Contact() {
       className={`flex justify-center bg-[var(--color-neutral-900)] items-center rounded-t-[50px] py-24 px-6 tab:px-12 lap:px-24 overflow-hidden relative`}
     >
       {/* Optional decorative gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-blue-500/20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-neutral-800)]/10 to-[var(--color-neutral-900)]/10 pointer-events-none"></div>
 
       <motion.div
         variants={slideUpVariant}

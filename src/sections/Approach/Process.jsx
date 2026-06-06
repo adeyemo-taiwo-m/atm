@@ -61,14 +61,14 @@ export default function Process() {
                   transition={{ delay: idx * 0.1 }}
                   className="flex flex-col items-center lap:items-start text-center lap:text-left group"
                 >
-                  <div className="w-20 h-20 rounded-3xl bg-[var(--color-neutral-50)] border border-[var(--color-neutral-200)] flex items-center justify-center text-2xl text-[var(--color-neutral-400)] mb-6 group-hover:bg-violet-600 group-hover:text-white group-hover:border-violet-600 group-hover:shadow-[0_0_30px_rgba(124,58,237,0.3)] transition-all duration-500">
+                  <div className="w-20 h-20 rounded-3xl bg-[var(--color-neutral-100)] border border-[var(--color-neutral-200)] flex items-center justify-center text-2xl text-[var(--color-neutral-400)] mb-6 group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-neutral-100)] group-hover:border-[var(--color-primary)] group-hover:shadow-[0_0_30px_var(--color-shadow)] transition-all duration-500">
                     {step.icon}
-                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white border border-[var(--color-neutral-200)] flex items-center justify-center text-[10px] font-black text-[var(--color-dark)] shadow-sm">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-[var(--color-white)] border border-[var(--color-neutral-200)] flex items-center justify-center text-[10px] font-black text-[var(--color-dark)] shadow-sm">
                       0{idx + 1}
                     </div>
                   </div>
                   <h3 className="text-lg font-stylish font-bold text-[var(--color-dark)] mb-3">{step.title}</h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{step.description}</p>
+                  <p className="text-sm text-[var(--color-neutral-500)] leading-relaxed">{step.description}</p>
                 </motion.div>
               ))}
             </AnimatePresence>

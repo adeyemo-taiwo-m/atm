@@ -251,33 +251,33 @@ export const skillGroups = [
   {
     label: "Design Tools",
     skills: [
-      { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
-      { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
+      { name: "Figma", icon: <FaFigma />, color: "var(--color-accent)" },
+      { name: "Photoshop", icon: <SiAdobephotoshop />, color: "var(--color-accent-hover)" },
     ],
   },
   {
     label: "Core Frontend",
     skills: [
-      { name: "HTML5", icon: <FaHtml5 />, color: "#E44D26" },
-      { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
-      { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
-      { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-      { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+      { name: "HTML5", icon: <FaHtml5 />, color: "var(--color-accent)" },
+      { name: "CSS3", icon: <FaCss3Alt />, color: "var(--color-accent-hover)" },
+      { name: "Tailwind", icon: <SiTailwindcss />, color: "var(--color-accent-active)" },
+      { name: "JavaScript", icon: <SiJavascript />, color: "var(--color-accent)" },
+      { name: "TypeScript", icon: <SiTypescript />, color: "var(--color-accent-hover)" },
     ],
   },
   {
     label: "Frameworks",
     skills: [
-      { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-      { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-      { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
+      { name: "React.js", icon: <FaReact />, color: "var(--color-accent)" },
+      { name: "Next.js", icon: <SiNextdotjs />, color: "var(--color-accent-hover)" },
+      { name: "Framer Motion", icon: <SiFramer />, color: "var(--color-accent-active)" },
     ],
   },
   {
     label: "Backend & Tools",
     skills: [
-      { name: "Supabase", icon: <SiSupabase />, color: "#3ECF8E" },
-      { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+      { name: "Supabase", icon: <SiSupabase />, color: "var(--color-accent)" },
+      { name: "GitHub", icon: <FaGithub />, color: "var(--color-accent-hover)" },
     ],
   },
 ];

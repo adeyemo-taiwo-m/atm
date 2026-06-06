@@ -8,90 +8,90 @@
   --breakpoint-desk: 80rem;
 
   /* ===================================================== */
-  /* 🎨 COLOR SYSTEM */
+  /* 🎨 COLOR SYSTEM (Monochrome & Chrome) */
   /* ===================================================== */
 
-  /* Primary (Purple-Blue) */
-  --color-primary: #5b3cf2;
-  --color-primary-hover: #4a39e0;
-  --color-primary-active: #3a31cc;
+  /* Primary (Obsidian Black) */
+  --color-primary: #09090b;
+  --color-primary-hover: #1c1c1f;
+  --color-primary-active: #27272a;
 
   /* Divider */
-  --color-divider: #000000;
+  --color-divider: rgba(0, 0, 0, 0.08);
 
-  /* Medium Blue */
-  --color-secondary: #347cff;
-  --color-secondary-hover: #2e6fde;
-  --color-secondary-active: #265fbd;
+  /* Secondary (Steel Gray) */
+  --color-secondary: #27272a;
+  --color-secondary-hover: #3f3f46;
+  --color-secondary-active: #52525b;
 
-  /* Sky Blue */
-  --color-accent: #4db7ff;
-  --color-accent-hover: #45a4e6;
-  --color-accent-active: #3a8fc9;
+  /* Accent (Silver) */
+  --color-accent: #71717a;
+  --color-accent-hover: #a1a1aa;
+  --color-accent-active: #d4d4d8;
 
   /* SUCCESS (Green) */
-  --color-success: #17b890;
-  --color-success-hover: #129d7b;
-  --color-success-active: #0e8367;
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-success-active: #047857;
 
-  --color-green-light: #e6f6f4;
-  --color-green-light-hover: #d9f2ef;
-  --color-green-light-active: #b0e4dd;
+  --color-green-light: #ecfdf5;
+  --color-green-light-hover: #d1fae5;
+  --color-green-light-active: #a7f3d0;
 
-  /* WARNING (Yellow / Orange) */
-  --color-warning: #f5a623;
-  --color-warning-hover: #e29412;
-  --color-warning-active: #cc830f;
+  /* WARNING (Amber) */
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+  --color-warning-active: #b45309;
 
-  --color-yellow-light: #fff9e6;
-  --color-yellow-light-hover: #fff6da;
-  --color-yellow-light-active: #ffecb2;
+  --color-yellow-light: #fef3c7;
+  --color-yellow-light-hover: #fde68a;
+  --color-yellow-light-active: #fcd34d;
 
   /* ERROR (Red) */
-  --color-error: #e63946;
-  --color-error-hover: #cf2e3b;
-  --color-error-active: #b92433;
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+  --color-error-active: #b91c1c;
 
-  --color-red-light: #ffdadc;
-  --color-red-light-hover: #ffc9cd;
-  --color-red-light-active: #ffb3b8;
+  --color-red-light: #fee2e2;
+  --color-red-light-hover: #fecaca;
+  --color-red-light-active: #fca5a5;
 
-  /* NEUTRALS — light mode (warm white, not pure gray) */
-  --color-neutral-100: #f7f8fc;
-  --color-neutral-200: #eef0f8;
-  --color-neutral-300: #dde1f0;
-  --color-neutral-400: #c4c9de;
-  --color-neutral-500: #a2a8c4;
-  --color-neutral-600: #7c82a8;
-  --color-neutral-700: #555b8a;
-  --color-neutral-800: #2e3470;
-  --color-neutral-900: #0f1340;
+  /* NEUTRALS — light mode (cool zinc gray) */
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e4e4e7;
+  --color-neutral-300: #d4d4d8;
+  --color-neutral-400: #a1a1aa;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+  --color-neutral-800: #27272a;
+  --color-neutral-900: #09090b;
   --color-white: #ffffff;
 
   /* LIGHTS & BACKGROUND */
-  --color-light: #eef3fd;
-  --color-light-hover: #dce7fb;
-  --color-light-active: #c4d4f5;
+  --color-light: #fafafa;
+  --color-light-hover: #f4f4f5;
+  --color-light-active: #e4e4e7;
 
-  --color-white-hover: #f3f6fb;
+  --color-white-hover: #f4f4f5;
 
   /* DARKS & TEXT */
-  --color-dark: #0f1340;
-  --color-dark-hover: #0b0f33;
-  --color-dark-active: #080b26;
+  --color-dark: #09090b;
+  --color-dark-hover: #1c1c1f;
+  --color-dark-active: #27272a;
 
   --color-black: #000000;
-  --color-black-hover: #0b0b0b;
+  --color-black-hover: #09090b;
 
   /* BRAND NEUTRAL TONES */
-  --color-content-bg: #f7f8fc;
-  --color-border: #dde1f0;
-  --color-shadow: rgba(91, 60, 242, 0.08);
+  --color-content-bg: #ffffff;
+  --color-border: #e4e4e7;
+  --color-shadow: rgba(0, 0, 0, 0.05);
 
   /* GOLD / HIGHLIGHT */
-  --color-gold: #ffe393;
-  --color-gold-hover: #ffd970;
-  --color-gold-active: #ffc94c;
+  --color-gold: #d4d4d8;
+  --color-gold-hover: #a1a1aa;
+  --color-gold-active: #71717a;
 
   /* Animations */
   --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
@@ -121,7 +121,7 @@
 }
 
 /* ===================================================== */
-/* 🌙 DARK MODE */
+/* 🌙 DARK MODE (Shiny Obsidian & Chrome) */
 /* ===================================================== */
 .dark {
   --breakpoint-mob: initial;
@@ -129,93 +129,88 @@
   --breakpoint-lap: 64rem;
   --breakpoint-desk: 80rem;
 
-  /* Primary (Purple-Blue) — brighter in dark */
-  --color-primary: #7866ff;
-  --color-primary-hover: #6a59f3;
-  --color-primary-active: #5c4bdd;
+  /* Primary (Chrome White) — shiny white button */
+  --color-primary: #ffffff;
+  --color-primary-hover: #e4e4e7;
+  --color-primary-active: #d4d4d8;
 
   /* Divider */
-  --color-divider: rgba(255, 255, 255, 0.1);
+  --color-divider: rgba(255, 255, 255, 0.08);
 
-  /* Secondary (Blue) */
-  --color-secondary: #4d8aff;
-  --color-secondary-hover: #4179e6;
-  --color-secondary-active: #3568c7;
+  /* Secondary (Obsidian Black) */
+  --color-secondary: #18181b;
+  --color-secondary-hover: #27272a;
+  --color-secondary-active: #3f3f46;
 
-  /* Accent (Sky Blue) */
-  --color-accent: #67c9ff;
-  --color-accent-hover: #56b4eb;
-  --color-accent-active: #4699cb;
+  /* Accent (Muted Silver) */
+  --color-accent: #a1a1aa;
+  --color-accent-hover: #71717a;
+  --color-accent-active: #52525b;
 
   /* SUCCESS */
-  --color-success: #1ad1a5;
-  --color-success-hover: #16b38e;
-  --color-success-active: #129778;
+  --color-success: #34d399;
+  --color-success-hover: #10b981;
+  --color-success-active: #059669;
 
-  --color-green-light: #1f3b35;
-  --color-green-light-hover: #24433d;
-  --color-green-light-active: #2c4e48;
+  --color-green-light: #064e3b;
+  --color-green-light-hover: #065f46;
+  --color-green-light-active: #047857;
 
   /* WARNING */
-  --color-warning: #ffb545;
-  --color-warning-hover: #e79f34;
-  --color-warning-active: #c98b2c;
+  --color-warning: #fbbf24;
+  --color-warning-hover: #f59e0b;
+  --color-warning-active: #d97706;
 
-  --color-yellow-light: #4a3b1f;
-  --color-yellow-light-hover: #554528;
-  --color-yellow-light-active: #665331;
+  --color-yellow-light: #78350f;
+  --color-yellow-light-hover: #92400e;
+  --color-yellow-light-active: #b45309;
 
   /* ERROR */
-  --color-error: #ff5a67;
-  --color-error-hover: #e84855;
-  --color-error-active: #cc3945;
+  --color-error: #f87171;
+  --color-error-hover: #ef4444;
+  --color-error-active: #dc2626;
 
-  --color-red-light: #4d2326;
-  --color-red-light-hover: #59282b;
-  --color-red-light-active: #632e31;
+  --color-red-light: #7f1d1d;
+  --color-red-light-hover: #991b1b;
+  --color-red-light-active: #b91c1c;
 
-  /* NEUTRALS — blue-tinted dark scale
-     100–400 = backgrounds/surfaces (dark)
-     500–600 = borders & dividers
-     700     = MUTED TEXT — must be bright enough to read on dark bg
-     800     = SECONDARY TEXT — labels, captions, placeholders
-     900     = PRIMARY TEXT — headings, body copy                    */
-  --color-neutral-100: #0e1521;
-  --color-neutral-200: #131c2e;
-  --color-neutral-300: #19243d;
-  --color-neutral-400: #1e2d45;
-  --color-neutral-500: #253655;
-  --color-neutral-600: #2e4369;
-  --color-neutral-700: #6b8fc7; /* muted text — readable on dark bg  */
-  --color-neutral-800: #a8c4e8; /* secondary text — labels, captions  */
-  --color-neutral-900: #e2ecf8; /* primary text — headings, body      */
+  /* NEUTRALS — zinc/obsidian black scale */
+  --color-neutral-100: #09090b; /* pure black bg */
+  --color-neutral-200: #121214; /* card bg */
+  --color-neutral-300: #1c1c1f;
+  --color-neutral-400: #27272a;
+  --color-neutral-500: #3f3f46;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #a1a1aa; /* muted text */
+  --color-neutral-800: #d4d4d8; /* secondary text */
+  --color-neutral-900: #f4f4f5; /* primary text */
 
   /* Surfaces & backgrounds */
-  --color-white: #131c2e;
-  --color-white-hover: #19243d;
+  --color-white: #121214;
+  --color-white-hover: #1c1c1f;
 
   /* Text — main semantic tokens */
-  --color-dark: #e2ecf8; /* primary body text                  */
-  --color-dark-hover: #eef4fc;
-  --color-dark-active: #f6f9fe;
+  --color-dark: #f4f4f5;
+  --color-dark-hover: #ffffff;
+  --color-dark-active: #e4e4e7;
 
-  --color-black: #f0f5ff; /* strongest text / pure white feel   */
-  --color-black-hover: #f8faff;
+  --color-black: #ffffff;
+  --color-black-hover: #f4f4f5;
 
   /* BRAND NEUTRAL TONES */
-  --color-content-bg: #0e1521;
-  --color-border: #253655;
-  --color-shadow: rgba(0, 0, 0, 0.45);
+  --color-content-bg: #09090b;
+  --color-border: #27272a;
+  --color-shadow: rgba(255, 255, 255, 0.08); /* glowing shadow border for obsidian glass */
 
   /* Light / tinted surfaces */
-  --color-light: #1e2d45;
-  --color-light-hover: #253655;
-  --color-light-active: #2e4369;
+  --color-light: #1c1c1f;
+  --color-light-hover: #27272a;
+  --color-light-active: #3f3f46;
 
-  /* Gold */
-  --color-gold: #f6d17a;
-  --color-gold-hover: #e5c06a;
-  --color-gold-active: #d1aa55;
+  /* Gold (Silver highlight in dark mode) */
+  --color-gold: #ffffff;
+  --color-gold-hover: #e4e4e7;
+  --color-gold-active: #d4d4d8;
 
   /* Animations unchanged */
   --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
@@ -279,7 +274,7 @@ h4,
   height: 800px;
   background: radial-gradient(
     circle at center,
-    rgba(91, 60, 242, 0.06) 0%,
+    rgba(0, 0, 0, 0.02) 0%,
     transparent 70%
   );
   z-index: 9999;
@@ -287,11 +282,11 @@ h4,
   transition: opacity 0.3s ease;
 }
 
-/* Dark mode cursor glow — brighter purple */
+/* Dark mode cursor glow — silver chrome flash */
 .dark .cursor-glow {
   background: radial-gradient(
     circle at center,
-    rgba(120, 102, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.05) 0%,
     transparent 70%
   );
 }
@@ -317,18 +312,21 @@ h4,
 /* 🎨 GRADIENT HELPERS */
 /* ===================================================== */
 :root {
-  /* Purple → Blue brand gradient */
-  --gradient-brand: linear-gradient(90deg, #5b3cf2 0%, #347cff 100%);
-  /* Blue → Cyan accent gradient */
-  --gradient-accent: linear-gradient(90deg, #347cff 0%, #4db7ff 100%);
+  /* Obsidian → Gray steel brand gradient */
+  --gradient-brand: linear-gradient(90deg, #09090b 0%, #27272a 50%, #52525b 100%);
+  /* Dark gray → Silver accent gradient */
+  --gradient-accent: linear-gradient(90deg, #27272a 0%, #71717a 100%);
   /* Neutral text gradient (light mode) */
-  --gradient-neutral: linear-gradient(90deg, #555b8a 0%, #0f1340 100%);
+  --gradient-neutral: linear-gradient(90deg, #09090b 0%, #3f3f46 100%);
 }
 
 .dark {
-  --gradient-brand: linear-gradient(90deg, #9b8bff 0%, #6aa8ff 100%);
-  --gradient-accent: linear-gradient(90deg, #6aa8ff 0%, #7cd4ff 100%);
-  --gradient-neutral: linear-gradient(90deg, #a8c4e8 0%, #e2ecf8 100%);
+  /* Silver → White chrome brand gradient */
+  --gradient-brand: linear-gradient(90deg, #ffffff 0%, #d4d4d8 50%, #71717a 100%);
+  /* Silver to bright white */
+  --gradient-accent: linear-gradient(90deg, #71717a 0%, #e4e4e7 100%);
+  /* Neutral text gradient (dark mode) */
+  --gradient-neutral: linear-gradient(90deg, #52525b 0%, #f4f4f5 100%);
 }
 
 /* Gradient text utility */

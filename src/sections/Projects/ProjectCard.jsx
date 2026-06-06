@@ -23,9 +23,9 @@ function ProjectCard({ project }) {
   };
 
   const badgeColors = {
-    design: "bg-violet-100 text-violet-700 border-violet-200",
-    development: "bg-blue-100 text-blue-700 border-blue-200",
-    all: "bg-gradient-to-r from-violet-100 to-blue-100 text-violet-800 border-violet-200",
+    design: "bg-[var(--color-neutral-100)] text-[var(--color-neutral-800)] border-[var(--color-neutral-300)]",
+    development: "bg-[var(--color-neutral-200)] text-[var(--color-neutral-900)] border-[var(--color-neutral-400)]",
+    all: "bg-gradient-to-r from-[var(--color-neutral-100)] to-[var(--color-neutral-200)] text-[var(--color-neutral-900)] border-[var(--color-neutral-300)]",
   };
 
   return (
@@ -35,7 +35,7 @@ function ProjectCard({ project }) {
       onMouseLeave={handleMouseLeave}
       animate={{ rotateX: rotate.x, rotateY: rotate.y }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="group relative rounded-[32px] overflow-hidden bg-white border border-[var(--color-neutral-200)] shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+      className="group relative rounded-[32px] overflow-hidden bg-[var(--color-white)] border border-[var(--color-neutral-200)] shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
       style={{ perspective: "1000px" }}
     >
       {/* Status Badge */}
@@ -73,10 +73,10 @@ function ProjectCard({ project }) {
       {/* Content */}
       <div className="p-6 tab:p-8 flex flex-col flex-1">
         <div className="flex-1">
-          <h3 className="text-xl tab:text-2xl text-[var(--color-dark)] font-stylish font-bold mb-3 group-hover:text-violet-600 transition-colors">
+          <h3 className="text-xl tab:text-2xl text-[var(--color-dark)] font-stylish font-bold mb-3 group-hover:text-[var(--color-accent)] transition-colors">
             {project.title}
           </h3>
-          <p className="text-neutral-500 leading-relaxed mb-6">
+          <p className="text-[var(--color-neutral-500)] leading-relaxed mb-6">
             {project.description}
           </p>
 
@@ -85,7 +85,7 @@ function ProjectCard({ project }) {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 rounded-lg bg-[var(--color-neutral-50)] border border-[var(--color-neutral-200)] text-[var(--color-neutral-600)] text-xs font-semibold"
+                className="px-3 py-1 rounded-lg bg-[var(--color-neutral-100)] border border-[var(--color-neutral-200)] text-[var(--color-neutral-600)] text-xs font-semibold"
               >
                 {tech}
               </span>

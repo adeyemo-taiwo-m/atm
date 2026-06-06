@@ -68,7 +68,7 @@ export default function About() {
               <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-neutral-400)] font-bold">
                 About me
               </span>
-              <div className="w-8 h-[2px] bg-violet-600" />
+              <div className="w-8 h-[2px] bg-[var(--color-primary)]" />
             </motion.div>
 
             {/* Heading */}
@@ -77,7 +77,7 @@ export default function About() {
               className="text-4xl tab:text-[42px] leading-[1.1] font-stylish font-extrabold text-[var(--color-dark)]"
             >
               Design Engineer. <br />
-              <span className="text-violet-600">I craft interfaces</span> that ship.
+              <span className="gradient-text-brand">I craft interfaces</span> that ship.
             </motion.h2>
 
             {/* Body */}
@@ -121,8 +121,8 @@ export default function About() {
                   className={`
                     text-[12px] px-[13px] py-[5px] rounded-[20px] border font-medium transition-all
                     ${tag.accented 
-                      ? "bg-violet-50 border-violet-200 text-violet-700" 
-                      : "bg-white border-[var(--color-neutral-200)] text-[var(--color-neutral-500)]"
+                      ? "bg-[var(--color-neutral-200)] border-[var(--color-neutral-300)] text-[var(--color-dark)]" 
+                      : "bg-[var(--color-white)] border-[var(--color-neutral-200)] text-[var(--color-neutral-500)]"
                     }
                   `}
                 >
@@ -139,14 +139,15 @@ export default function About() {
             >
               <Button
                 onClick={() => window.open("/Adeyemo Taiwo M Resume.pdf", "_blank")}
-                className="bg-violet-600 !text-white !rounded-full !px-8 !py-4 hover:bg-violet-700 shadow-lg shadow-violet-200 transition-all border-none normal-case font-semibold"
+                variant="primary"
+                className="!rounded-full !px-8 !py-4 transition-all border-none normal-case font-semibold"
               >
                 Download resume
               </Button>
               <Button
                 variant="secondary"
                 onClick={scrollToProjects}
-                className="!rounded-full !px-8 !py-4 border-[var(--color-neutral-200)] text-[var(--color-neutral-500)] hover:bg-neutral-50 transition-all normal-case font-semibold"
+                className="!rounded-full !px-8 !py-4 border-[var(--color-neutral-200)] transition-all normal-case font-semibold"
               >
                 View projects
               </Button>
