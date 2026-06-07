@@ -377,30 +377,30 @@ h4,
 /* handle common Tailwind opacity/muted patterns that   */
 /* don't use CSS vars directly.                         */
 
-.dark .text-muted,
-.dark [class*="text-neutral-600"],
-.dark [class*="text-neutral-700"],
-.dark [class*="text-gray-500"],
-.dark [class*="text-gray-600"],
-.dark [class*="opacity-50"],
-.dark [class*="opacity-60"] {
+.dark .text-muted:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="text-neutral-600"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="text-neutral-700"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="text-gray-500"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="text-gray-600"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="opacity-50"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="opacity-60"]:not(button):not(a):not(.button):not([role="button"]) {
   color: var(--color-neutral-800) !important;
   opacity: 1 !important;
 }
 
 /* Section sub-labels (e.g. "DESIGN TOOLS", "CORE FRONTEND") */
-.dark .section-label,
-.dark [class*="tracking-widest"],
-.dark [class*="uppercase"][class*="text-xs"],
-.dark [class*="uppercase"][class*="text-sm"] {
+.dark .section-label:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="tracking-widest"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="uppercase"][class*="text-xs"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="uppercase"][class*="text-sm"]:not(button):not(a):not(.button):not([role="button"]) {
   color: var(--color-neutral-800) !important;
 }
 
 /* Skill pill text, tag text, badge text in dark mode */
-.dark .skill-pill,
-.dark .tag-pill,
-.dark [class*="rounded-full"][class*="text-xs"],
-.dark [class*="rounded-full"][class*="text-sm"] {
+.dark .skill-pill:not(button):not(a):not(.button):not([role="button"]),
+.dark .tag-pill:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="rounded-full"][class*="text-xs"]:not(button):not(a):not(.button):not([role="button"]),
+.dark [class*="rounded-full"][class*="text-sm"]:not(button):not(a):not(.button):not([role="button"]) {
   color: var(--color-neutral-900) !important;
 }
 

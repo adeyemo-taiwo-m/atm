@@ -8,8 +8,8 @@ const FilterBar = () => {
 
   const filters = [
     { id: 'all', label: 'All', icon: null },
-    { id: 'design', label: 'Design', icon: <FaPenNib className="text-sm" /> },
-    { id: 'development', label: 'Development', icon: <FaCode className="text-sm" /> },
+    { id: 'design', label: 'Design', icon: <FaPenNib className="text-[0.875rem]" /> },
+    { id: 'development', label: 'Development', icon: <FaCode className="text-[0.875rem]" /> },
   ];
 
   return (
@@ -31,7 +31,7 @@ const FilterBar = () => {
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               />
             )}
-            <span className="relative z-10 flex items-center gap-2 text-sm">
+            <span className="relative z-10 flex items-center gap-2 text-[0.875rem]">
               {f.icon}
               {f.label}
             </span>

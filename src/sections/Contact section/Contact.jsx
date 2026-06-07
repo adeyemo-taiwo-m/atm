@@ -30,7 +30,7 @@ export default function Contact() {
         className="w-full relative text-center z-10"
       >
         <Heading className="!text-white mb-4">Let’s Work Together</Heading>
-        <p className="text-neutral-100 text-lg mb-10 leading-relaxed">
+        <p className="!text-neutral-100 text-lg mb-10 leading-relaxed">
           Have a project in mind or want to collaborate? I’m always open to
           discussing new ideas or improving existing projects.
         </p>
