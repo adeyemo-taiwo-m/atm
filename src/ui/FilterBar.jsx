@@ -20,7 +20,7 @@ const FilterBar = () => {
             key={f.id}
             onClick={() => setMode(f.id)}
             className={`
-              relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300
+              relative flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all duration-300
               ${mode === f.id ? 'text-[var(--color-neutral-100)]' : 'text-[var(--color-neutral-600)] hover:text-[var(--color-dark)]'}
             `}
           >
@@ -31,7 +31,7 @@ const FilterBar = () => {
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               />
             )}
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center gap-2 text-sm">
               {f.icon}
               {f.label}
             </span>
