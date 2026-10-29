@@ -37,10 +37,9 @@ export const projectsData = [
     ],
     image: "/buylens-ai.png",
     liveLink: "https://buylens-ai.vercel.app",
-    githubLink: "https://github.com/adeyemo-taiwo-m/Buylens-AI.git",
     designLink:
       "https://www.behance.net/gallery/257348131/BuyLens-AI-See-the-Risks-Before-You-Buy",
-    mode: "development",
+    mode: "all",
     impact:
       "Helps buyers spot risks and ask smarter questions before spending.",
   },
