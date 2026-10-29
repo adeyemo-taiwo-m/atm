@@ -24,6 +24,27 @@ import {
 
 export const projectsData = [
   {
+    title: "BuyLens AI",
+    description:
+      "AI-powered purchase decision tool that analyzes a product's price, value, risks, and missing details, then gives a clear recommendation and the right questions to ask the seller before you buy.",
+    role: "Product Designer / Frontend Developer",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Responsive Design",
+    ],
+    image: "/buylens-ai.png",
+    liveLink: "https://buylens-ai.vercel.app",
+    githubLink: "https://github.com/adeyemo-taiwo-m/Buylens-AI.git",
+    designLink:
+      "https://www.behance.net/gallery/257348131/BuyLens-AI-See-the-Risks-Before-You-Buy",
+    mode: "development",
+    impact:
+      "Helps buyers spot risks and ask smarter questions before spending.",
+  },
+  {
     title: "Fleer - Fleet Intelligence",
     description:
       "Real-time fleet intelligence platform that detects fuel theft, route deviations & idle abuse — and shows exactly how much it's costing you.",
@@ -34,7 +55,8 @@ export const projectsData = [
     githubLink: "https://github.com/adeyemo-taiwo-m/Fleer.git",
     designLink: "",
     mode: "development",
-    impact: "Maximizing fleet efficiency and reducing operational costs through real-time monitoring.",
+    impact:
+      "Maximizing fleet efficiency and reducing operational costs through real-time monitoring.",
   },
   {
     title: "NexCity Realty",
@@ -69,7 +91,8 @@ export const projectsData = [
     techStack: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
     image: "/weather.jpg",
     liveLink: "https://weather-app-fm30-eta.vercel.app/",
-    githubLink: "https://github.com/adeyemo-taiwo-m/weather-app-fm30-hackaton.git",
+    githubLink:
+      "https://github.com/adeyemo-taiwo-m/weather-app-fm30-hackaton.git",
     designLink: "",
     mode: "development",
     impact: "Real-time weather data integration with seamless UX.",
@@ -252,7 +275,11 @@ export const skillGroups = [
     label: "Design Tools",
     skills: [
       { name: "Figma", icon: <FaFigma />, color: "var(--color-accent)" },
-      { name: "Photoshop", icon: <SiAdobephotoshop />, color: "var(--color-accent-hover)" },
+      {
+        name: "Photoshop",
+        icon: <SiAdobephotoshop />,
+        color: "var(--color-accent-hover)",
+      },
     ],
   },
   {
@@ -260,24 +287,48 @@ export const skillGroups = [
     skills: [
       { name: "HTML5", icon: <FaHtml5 />, color: "var(--color-accent)" },
       { name: "CSS3", icon: <FaCss3Alt />, color: "var(--color-accent-hover)" },
-      { name: "Tailwind", icon: <SiTailwindcss />, color: "var(--color-accent-active)" },
-      { name: "JavaScript", icon: <SiJavascript />, color: "var(--color-accent)" },
-      { name: "TypeScript", icon: <SiTypescript />, color: "var(--color-accent-hover)" },
+      {
+        name: "Tailwind",
+        icon: <SiTailwindcss />,
+        color: "var(--color-accent-active)",
+      },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript />,
+        color: "var(--color-accent)",
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+        color: "var(--color-accent-hover)",
+      },
     ],
   },
   {
     label: "Frameworks",
     skills: [
       { name: "React.js", icon: <FaReact />, color: "var(--color-accent)" },
-      { name: "Next.js", icon: <SiNextdotjs />, color: "var(--color-accent-hover)" },
-      { name: "Framer Motion", icon: <SiFramer />, color: "var(--color-accent-active)" },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        color: "var(--color-accent-hover)",
+      },
+      {
+        name: "Framer Motion",
+        icon: <SiFramer />,
+        color: "var(--color-accent-active)",
+      },
     ],
   },
   {
     label: "Backend & Tools",
     skills: [
       { name: "Supabase", icon: <SiSupabase />, color: "var(--color-accent)" },
-      { name: "GitHub", icon: <FaGithub />, color: "var(--color-accent-hover)" },
+      {
+        name: "GitHub",
+        icon: <FaGithub />,
+        color: "var(--color-accent-hover)",
+      },
     ],
   },
 ];
